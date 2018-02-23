@@ -1,11 +1,16 @@
 package domain;
 
+import javax.json.bind.annotation.JsonbAnnotation;
+import javax.json.bind.annotation.JsonbProperty;
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "user.findByname", query = "SELECT s FROM User s WHERE s.username = :name")})
+        @NamedQuery(name = "user.findByname", query = "SELECT s FROM User s WHERE s.username = :name"),
+        @NamedQuery(name = "user.findByID", query = "SELECT s FROM User s WHERE s.id = :id")
+})
 
 public class User {
     @Id
@@ -18,6 +23,14 @@ public class User {
     private String salt;
     @ManyToMany(mappedBy = "likedBy")
     private List<Tweet> likes;
+
+    @JsonbTransient
+    @ManyToMany
+    private List<User> followers;
+
+    @JsonbTransient
+    @ManyToMany(mappedBy = "followers", cascade = CascadeType.PERSIST)
+    private List<User> following;
 
     public User(String username, String bio, String password) {
         this.username = username;
@@ -74,5 +87,37 @@ public class User {
 
     public void setLikes(List<Tweet> likes) {
         this.likes = likes;
+    }
+
+    public List<User> getFollowers() {
+        return followers;
+    }
+
+    public void setFollowers(List<User> followers) {
+        this.followers = followers;
+    }
+
+    public List<User> getFollowing() {
+        return following;
+    }
+
+    public void setFollowing(List<User> following) {
+        this.following = following;
+    }
+
+    public void addFollower(User follower) {
+        followers.add(follower);
+    }
+
+    public void addFollowing(User toFollow) {
+        following.add(toFollow);
+    }
+
+    public void removeFollower(User follower) {
+        followers.remove(follower);
+    }
+
+    public void removeFollowing(User toUnfollow) {
+        following.remove(toUnfollow);
     }
 }

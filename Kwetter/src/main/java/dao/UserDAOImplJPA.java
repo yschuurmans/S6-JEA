@@ -2,18 +2,15 @@ package dao;
 
 import Annotations.JPA;
 import domain.User;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import javax.ejb.Stateless;
-import javax.enterprise.inject.Default;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
-@Stateless @JPA
+@Stateless
+@JPA
 public class UserDAOImplJPA implements UserDAO {
     public UserDAOImplJPA() {
     }
@@ -22,8 +19,14 @@ public class UserDAOImplJPA implements UserDAO {
     private EntityManager em;
 
     @Override
-    public void addUser(User user) {
-        em.persist(user);
+    public boolean addUser(User user) {
+        try {
+            em.persist(user);
+            return true;
+        } catch (EntityExistsException ex) {
+            System.out.println(ex);
+            return false;
+        }
     }
 
     @Override
@@ -36,6 +39,16 @@ public class UserDAOImplJPA implements UserDAO {
         TypedQuery<User> query = em.createNamedQuery("user.findByname", User.class);
         query.setParameter("name", name);
         List<User> result = query.getResultList();
+        if (result.size() <= 0) return null;
+        return result.get(0);
+    }
+
+    @Override
+    public User getUser(int id) {
+        TypedQuery<User> query = em.createNamedQuery("user.findByID", User.class);
+        query.setParameter("id", id);
+        List<User> result = query.getResultList();
+        if (result.size() <= 0) return null;
         return result.get(0);
     }
 
@@ -43,5 +56,20 @@ public class UserDAOImplJPA implements UserDAO {
     public List<User> getAllUsers() {
         Query query = em.createQuery("SELECT s FROM User s");
         return new ArrayList<>(query.getResultList());
+    }
+
+    @Override
+    public boolean editUser(User user) {
+        throw new NotImplementedException();
+    }
+
+    @Override
+    public void addFollower(int idFollower, int idToFollow) {
+        throw new NotImplementedException();
+    }
+
+    @Override
+    public void removeFollower(int idFollower, int idToUnfollow) {
+        throw new NotImplementedException();
     }
 }
