@@ -24,6 +24,9 @@ public class User {
     @ManyToMany(mappedBy = "likedBy")
     private List<Tweet> likes;
 
+    @OneToMany(mappedBy = "poster")
+    private List<Tweet> tweets;
+
     @JsonbTransient
     @ManyToMany
     private List<User> followers;
@@ -119,5 +122,13 @@ public class User {
 
     public void removeFollowing(User toUnfollow) {
         following.remove(toUnfollow);
+    }
+
+    public List<Tweet> getTweets() {
+        return tweets;
+    }
+
+    public void setTweets(List<Tweet> tweets) {
+        this.tweets = tweets;
     }
 }
