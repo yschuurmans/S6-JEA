@@ -4,6 +4,7 @@ import dao.TweetDAO;
 import domain.Tweet;
 
 import javax.inject.Inject;
+import java.util.List;
 
 public class TweetService {
 
@@ -14,7 +15,11 @@ public class TweetService {
 
     }
 
-    public void addTweet(Tweet tweet){}
+    public void addTweet(Tweet tweet){tweetDAO.addTweet(tweet);}
 
-    public void removeTweet() {}
+    public void removeTweet(Tweet tweet) {tweetDAO.removeTweet(tweet);}
+
+    public List<Tweet> searchTweets(String seartText) {return tweetDAO.searchTweets(seartText);}
+
+    public List<Tweet> getAllTweets() {return tweetDAO.getAllTweets();}
 }

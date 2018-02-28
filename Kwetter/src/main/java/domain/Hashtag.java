@@ -18,6 +18,7 @@ public class Hashtag {
     @ManyToMany
     private List<Tweet> tweetsUsingHashtag;
 
+
     public Hashtag() {
     }
 

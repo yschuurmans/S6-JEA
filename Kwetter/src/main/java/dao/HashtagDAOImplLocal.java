@@ -45,7 +45,7 @@ hashtags.remove(hashtag);
     public List<Hashtag> searchHashtags(String searchTerm) {
         List<Hashtag> returnList = new ArrayList<>();
         for (Hashtag hashtag : hashtags) {
-            if(hashtag.getHashtag().startsWith(searchTerm))
+            if(hashtag.getHashtag().toLowerCase().startsWith(searchTerm.toLowerCase()))
                 returnList.add(hashtag);
         }
         return returnList;
