@@ -49,7 +49,7 @@ public class HashtagDAOImplJPA implements HashtagDAO {
     @Override
     public List<Hashtag> searchHashtags(String searchTerm) {
         TypedQuery<Hashtag> query = em.createNamedQuery("hashtag.searchHashtags", Hashtag.class);
-        query.setParameter("searchTerm", "%"+ searchTerm + "%" );
+        query.setParameter("searchTerm", searchTerm + "%" );
         List<Hashtag> result = query.getResultList();
         return result;
     }

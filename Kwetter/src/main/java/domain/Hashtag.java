@@ -17,4 +17,35 @@ public class Hashtag {
     private String hashtag;
     @ManyToMany
     private List<Tweet> tweetsUsingHashtag;
+
+    public Hashtag() {
+    }
+
+    public Hashtag(String hashtag) {
+        this.hashtag = hashtag;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getHashtag() {
+        return hashtag;
+    }
+
+    public void setHashtag(String hashtag) {
+        this.hashtag = hashtag;
+    }
+
+    public List<Tweet> getTweetsUsingHashtag() {
+        return tweetsUsingHashtag;
+    }
+
+    public void setTweetsUsingHashtag(List<Tweet> tweetsUsingHashtag) {
+        this.tweetsUsingHashtag = tweetsUsingHashtag;
+    }
 }
