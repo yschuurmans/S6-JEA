@@ -21,5 +21,9 @@ public class TweetService {
 
     public List<Tweet> searchTweets(String seartText) {return tweetDAO.searchTweets(seartText);}
 
+    public Tweet findTweetById(int id) {return tweetDAO.findTweetByID(id);}
+
     public List<Tweet> getAllTweets() {return tweetDAO.getAllTweets();}
+
+    public List<Tweet> likeTweet(Tweet tweet, String username) {return tweetDAO.getAllTweets();}
 }

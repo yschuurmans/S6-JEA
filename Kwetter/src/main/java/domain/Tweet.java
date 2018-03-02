@@ -6,7 +6,8 @@ import java.util.List;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "tweet.searchTweets", query = "SELECT t FROM Tweet t WHERE t.tweetContent LIKE :searchContent")
+        @NamedQuery(name = "tweet.searchTweets", query = "SELECT t FROM Tweet t WHERE t.tweetContent LIKE :searchContent"),
+        @NamedQuery(name = "tweet.findByID", query = "SELECT t FROM Tweet t WHERE t.id = :id")
 })
 public class Tweet {
     public Tweet() {

@@ -10,4 +10,5 @@ public interface TweetDAO {
     void removeTweet(Tweet tweet);
     List<Tweet> searchTweets(String searchText);
     List<Tweet> getAllTweets();
+    Tweet findTweetByID(int id);
 }

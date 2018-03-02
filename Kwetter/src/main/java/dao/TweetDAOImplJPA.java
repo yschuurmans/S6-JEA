@@ -42,4 +42,13 @@ public class TweetDAOImplJPA implements TweetDAO {
         Query query = em.createQuery("SELECT t FROM Tweet t");
         return new ArrayList<>(query.getResultList());
     }
+
+    @Override
+    public Tweet findTweetByID(int id) {
+        TypedQuery<Tweet> query = em.createNamedQuery("tweet.findByID", Tweet.class);
+        query.setParameter("id", id);
+        List<Tweet> result = query.getResultList();
+        if (result.size() <= 0) return null;
+        return result.get(0);
+    }
 }
