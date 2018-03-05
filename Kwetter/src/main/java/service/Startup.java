@@ -1,5 +1,7 @@
 package service;
 
+import domain.Hashtag;
+import domain.Tweet;
 import domain.User;
 
 import javax.annotation.PostConstruct;
@@ -14,6 +16,10 @@ public class Startup {
 
     @Inject
     private UserService userService;
+    @Inject
+    private TweetService tweetService;
+    @Inject
+    private HashtagService hashtagService;
 
     public Startup() {
     }
@@ -24,21 +30,24 @@ public class Startup {
         User Ken = new User("Ken", "KutDorp", "KensPassword");
         User Mike = new User("Mike", "NogEenKutdorp", "MikesPassword");
 
-        List<User> youriFollowers = new ArrayList<User>();
-        youriFollowers.add(Ken);
-        youriFollowers.add(Mike);
-        Youri.setFollowers(youriFollowers);
-
-        List kenFollowers= new ArrayList<User>();
-        kenFollowers.add(Youri);
-        Ken.setFollowers(kenFollowers);
-        List mikeFollowers= new ArrayList<User>();
-        mikeFollowers.add(Youri);
-        Mike.setFollowers(mikeFollowers);
-
         userService.addUser(Youri);
         userService.addUser(Ken);
         userService.addUser(Mike);
+
+        userService.addFollower("Ken", "Youri");
+        userService.addFollower("Mike", "Youri");
+        userService.addFollower("Youri", "Ken");
+        userService.addFollower("Youri", "Mike");
+
+        tweetService.addTweet(new Tweet(Youri, "RandomTweet"));
+        tweetService.addTweet(new Tweet(Youri, "RandomTweet2"));
+        tweetService.addTweet(new Tweet(Youri, "Testdata is interessant"));
+        tweetService.addTweet(new Tweet(Youri, "Waarom lees je dit überhaupt?"));
+
+        tweetService.addTweet(new Tweet(Youri, "#Twitter =/= #kwetter"));
+        tweetService.addTweet(new Tweet(Youri, "werken aan de #kwetter app"));
+
+
 
     }
 }

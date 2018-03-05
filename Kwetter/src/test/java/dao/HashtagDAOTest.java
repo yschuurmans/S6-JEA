@@ -26,9 +26,6 @@ public class HashtagDAOTest {
         hashtagDAO.addHashTag(ht2);
 
         assertEquals(hashtagDAO.getAllHashtags().size(),2);
-
-        assertEquals(hashtagDAO.findHashtag("TestHashtag"), ht1);
-        assertEquals(hashtagDAO.findHashtag("TestHashtag2"), ht2);
     }
 
     @Test
@@ -105,6 +102,9 @@ public class HashtagDAOTest {
         Hashtag ht5 = new Hashtag("TestHashtag5");
         Hashtag ht6 = new Hashtag("TestHashtag6");
 
+        hashtagDAO.addHashTag(ht5);
+        hashtagDAO.addHashTag(ht6);
+
         assertEquals(hashtagDAO.getAllHashtags().size(),6);
 
         List<Hashtag> allHashtags2 = hashtagDAO.getAllHashtags();
@@ -140,6 +140,9 @@ public class HashtagDAOTest {
 
         Hashtag ht5 = new Hashtag("TestHashtag5");
         Hashtag ht6 = new Hashtag("TestHashtag6");
+
+        hashtagDAO.addHashTag(ht5);
+        hashtagDAO.addHashTag(ht6);
 
         assertEquals(hashtagDAO.getAllHashtags().size(),6);
 

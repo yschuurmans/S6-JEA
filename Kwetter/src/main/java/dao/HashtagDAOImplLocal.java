@@ -1,7 +1,6 @@
 package dao;
 
 import domain.Hashtag;
-import domain.Tweet;
 
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
@@ -49,5 +48,16 @@ hashtags.remove(hashtag);
                 returnList.add(hashtag);
         }
         return returnList;
+    }
+
+    @Override
+    public boolean editHashtag(Hashtag hashtag) {
+        for (int i = 0; i < hashtags.size(); i++) {
+            if (hashtags.get(i).getId() == hashtag.getId()) {
+                hashtags.set(i, hashtag);
+                return true;
+            }
+        }
+        return false;
     }
 }

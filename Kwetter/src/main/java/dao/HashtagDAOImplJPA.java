@@ -53,4 +53,14 @@ public class HashtagDAOImplJPA implements HashtagDAO {
         List<Hashtag> result = query.getResultList();
         return result;
     }
+
+    @Override
+    public boolean editHashtag(Hashtag hashtag) {
+        try {
+            em.merge(hashtag);
+            return true;
+        }catch(Exception ex) {
+            return false;
+        }
+    }
 }

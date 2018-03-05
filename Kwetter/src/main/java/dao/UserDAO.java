@@ -8,13 +8,9 @@ public interface UserDAO {
     boolean addUser(User user);
     void removeUser(User user);
     User findUserByName(String name);
-    User getUser(int id);
+    User getUser(long id);
     List<User> getAllUsers();
 
     boolean editUser(User user);
-
-    void addFollower(int idFollower, int idToFollow);
-
-    void removeFollower(int idFollower, int idToUnfollow);
 
 }

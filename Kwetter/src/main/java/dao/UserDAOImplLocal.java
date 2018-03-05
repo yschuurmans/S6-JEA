@@ -41,7 +41,7 @@ public class UserDAOImplLocal implements UserDAO {
     }
 
     @Override
-    public User getUser(int id) {
+    public User getUser(long id) {
         for (User user : users) {
             if (user.getId() == id) {
                 return user;
@@ -64,21 +64,5 @@ public class UserDAOImplLocal implements UserDAO {
             }
         }
         return false;
-    }
-
-    @Override
-    public void addFollower(int idFollower, int idToFollow) {
-        User follower = getUser(idFollower);
-        User toFollow = getUser(idToFollow);
-        toFollow.addFollower(follower);
-        follower.addFollowing(toFollow);
-    }
-
-    @Override
-    public void removeFollower(int idFollower, int idToUnfollow) {
-        User follower = getUser(idFollower);
-        User toUnfollow = getUser(idToUnfollow);
-        toUnfollow.removeFollower(follower);
-        follower.removeFollowing(toUnfollow);
     }
 }

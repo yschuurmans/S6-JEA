@@ -11,4 +11,6 @@ public interface HashtagDAO {
     List<Hashtag> getAllHashtags();
 
     List<Hashtag> searchHashtags(String searchTerm);
+
+    boolean editHashtag(Hashtag hashtag);
 }

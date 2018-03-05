@@ -1,9 +1,16 @@
 package domain;
 
+import Logic.HttpLogic;
+
+import javax.json.Json;
+import javax.json.JsonObject;
 import javax.json.bind.annotation.JsonbAnnotation;
 import javax.json.bind.annotation.JsonbProperty;
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.ws.rs.core.Request;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -21,10 +28,10 @@ public class User {
     private String bio;
     private String password;
     private String salt;
-    @ManyToMany(mappedBy = "likedBy")
+    @ManyToMany(mappedBy = "likedBy", cascade = CascadeType.PERSIST)
     private List<Tweet> likes;
 
-    @OneToMany(mappedBy = "poster")
+    @OneToMany(mappedBy = "poster", cascade = CascadeType.PERSIST)
     private List<Tweet> tweets;
 
     @JsonbTransient
@@ -39,9 +46,24 @@ public class User {
         this.username = username;
         this.bio = bio;
         this.password = password;
+
+        likes = new ArrayList<>();
+        tweets = new ArrayList<>();
+        followers = new ArrayList<>();
+        following = new ArrayList<>();
     }
 
     public User() {
+    }
+
+    public JsonObject toJson(HttpServletRequest request) {
+        return Json.createObjectBuilder().
+                add("id", this.id).
+                add("username", this.username).
+                add("bio", this.bio).
+                add("tweets", HttpLogic.getResourceUrl(request,"/users/"+this.username+"/tweets")).
+                add("likes", HttpLogic.getResourceUrl(request,"/users/"+this.username+"/liked")).
+                build();
     }
 
     public long getId() {

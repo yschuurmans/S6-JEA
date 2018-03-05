@@ -6,10 +6,18 @@ import java.util.List;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "tweet.searchTweets", query = "SELECT t FROM Tweet t WHERE t.tweetContent LIKE :searchContent")
+        @NamedQuery(name = "tweet.searchTweets", query = "SELECT t FROM Tweet t WHERE t.tweetContent LIKE :searchContent"),
+        @NamedQuery(name = "tweet.findByID", query = "SELECT t FROM Tweet t WHERE t.id = :id"),
+        @NamedQuery(name = "tweet.findByPoster", query = "SELECT t FROM Tweet t WHERE t.poster = :poster")
+
 })
 public class Tweet {
     public Tweet() {
+    }
+
+    public Tweet(User poster, String content) {
+        this.poster = poster;
+        this.tweetContent = content;
     }
 
     @Id
@@ -22,9 +30,8 @@ public class Tweet {
     public List<User> mentions;
     @ManyToMany
     private List<User> likedBy;
-    @ManyToMany(mappedBy = "tweetsUsingHashtag")
+    @ManyToMany(mappedBy = "tweetsUsingHashtag", cascade = CascadeType.PERSIST)
     private List<Hashtag> hashTagsUsed;
-
 
 
     public long getId() {

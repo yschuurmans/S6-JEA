@@ -44,7 +44,7 @@ public class UserDAOImplJPA implements UserDAO {
     }
 
     @Override
-    public User getUser(int id) {
+    public User getUser(long id) {
         TypedQuery<User> query = em.createNamedQuery("user.findByID", User.class);
         query.setParameter("id", id);
         List<User> result = query.getResultList();
@@ -54,22 +54,20 @@ public class UserDAOImplJPA implements UserDAO {
 
     @Override
     public List<User> getAllUsers() {
+        em.flush();
         Query query = em.createQuery("SELECT s FROM User s");
         return new ArrayList<>(query.getResultList());
     }
 
     @Override
     public boolean editUser(User user) {
-        throw new NotImplementedException();
+        try {
+            em.merge(user);
+            return true;
+        }catch(Exception ex) {
+            return false;
+        }
     }
 
-    @Override
-    public void addFollower(int idFollower, int idToFollow) {
-        throw new NotImplementedException();
-    }
 
-    @Override
-    public void removeFollower(int idFollower, int idToUnfollow) {
-        throw new NotImplementedException();
-    }
 }

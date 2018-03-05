@@ -1,6 +1,7 @@
 package domain;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -20,10 +21,12 @@ public class Hashtag {
 
 
     public Hashtag() {
+        tweetsUsingHashtag = new ArrayList<>();
     }
 
     public Hashtag(String hashtag) {
         this.hashtag = hashtag;
+        tweetsUsingHashtag = new ArrayList<>();
     }
 
     public long getId() {
