@@ -2,6 +2,7 @@ package domain;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -13,11 +14,18 @@ import java.util.List;
 })
 public class Tweet {
     public Tweet() {
+        mentions = new ArrayList<>();
+        likedBy = new ArrayList<>();
+        hashTagsUsed = new ArrayList<>();
     }
 
     public Tweet(User poster, String content) {
         this.poster = poster;
         this.tweetContent = content;
+
+        mentions = new ArrayList<>();
+        likedBy = new ArrayList<>();
+        hashTagsUsed = new ArrayList<>();
     }
 
     @Id

@@ -35,6 +35,12 @@ public class UserDAOImplJPA implements UserDAO {
     }
 
     @Override
+    public void removeUser(String user) {
+        User u = findUserByName(user);
+        em.remove(u);
+    }
+
+    @Override
     public User findUserByName(String name) {
         TypedQuery<User> query = em.createNamedQuery("user.findByname", User.class);
         query.setParameter("name", name);

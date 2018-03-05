@@ -58,7 +58,7 @@ public class TweetService {
         tweetDAO.removeTweet(tweet);
     }
 
-    public void likeTweet(int tweetid, String username) {
+    public void likeTweet(long tweetid, String username) {
         User liker = userService.findByName(username);
         Tweet likedTweet = getTweet(tweetid);
         liker.getLikes().add(likedTweet);
@@ -67,7 +67,7 @@ public class TweetService {
         tweetDAO.editTweet(likedTweet);
     }
 
-    public Tweet getTweet(int id) {
+    public Tweet getTweet(long id) {
         return tweetDAO.getTweet(id);
     }
 

@@ -54,6 +54,10 @@ public class User {
     }
 
     public User() {
+        likes = new ArrayList<>();
+        tweets = new ArrayList<>();
+        followers = new ArrayList<>();
+        following = new ArrayList<>();
     }
 
     public JsonObject toJson(HttpServletRequest request) {

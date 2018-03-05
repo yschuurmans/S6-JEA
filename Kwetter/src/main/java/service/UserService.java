@@ -9,7 +9,6 @@ import java.util.List;
 
 public class UserService {
     @Inject
-    @JPA
     private UserDAO userDAO;
 
     public UserService() {
@@ -58,6 +57,8 @@ public class UserService {
         User toUnfollow = userDAO.findUserByName(nameToUnfollow);
         toUnfollow.removeFollower(follower);
         follower.removeFollowing(toUnfollow);
+        editUser(toUnfollow);
+        editUser(follower);
     }
 
     public List<User> getUserFollowers(String username) {

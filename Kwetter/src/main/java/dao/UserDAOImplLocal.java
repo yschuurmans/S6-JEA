@@ -31,6 +31,11 @@ public class UserDAOImplLocal implements UserDAO {
     }
 
     @Override
+    public void removeUser(String user) {
+        users.remove(findUserByName(user));
+    }
+
+    @Override
     public User findUserByName(String name) {
         for (User user : users) {
             if (user.getUsername().contentEquals(name)) {
