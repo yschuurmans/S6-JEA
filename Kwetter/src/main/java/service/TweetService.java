@@ -29,10 +29,22 @@ public class TweetService {
 
     }
 
+    public List<Tweet> getTimelineTweets(String username, int amountTweets) {
+        User currentUser = userService.findByName(username);
+        List<Tweet> timelineTweets = new ArrayList<>();
+        for (User following : currentUser.getFollowing()) {
+            timelineTweets
+                    .addAll(following.getTweets()
+                    .subList(following.getTweets().size()-amountTweets,
+                            following.getTweets().size()));
+        }
+        return timelineTweets.subList(timelineTweets.size() - amountTweets, timelineTweets.size());
+    }
+
     public void addTweet(Tweet tweet) {
         //Match hastag usages within tweet content, and save these to the relevant hashtag and
         Pattern p = Pattern.compile("(?<=#)\\w++");
-        Matcher m = p.matcher("Testing123Testing");
+        Matcher m = p.matcher(tweet.getTweetContent());
         List<Hashtag> usedHashtags = new ArrayList<>();
         while (m.find()) {
             String tagString = m.group();
@@ -46,7 +58,20 @@ public class TweetService {
             usedHashtags.add(hashtag);
         }
 
+        Pattern p2 = Pattern.compile("(?<=@)\\w++");
+        Matcher m2 = p.matcher(tweet.getTweetContent());
+        List<User> usedMentions = new ArrayList<>();
+        while (m.find()) {
+            String nameString = m.group();
+            User user = userService.findByName(nameString);
+            if (user != null) {
+                usedMentions.add(user);
+            }
+
+        }
+
         tweet.setHashTagsUsed(usedHashtags);
+        tweet.setMentions(usedMentions);
         tweetDAO.addTweet(tweet);
         User poster = tweet.getPoster();
         poster.getTweets().add(tweet);
@@ -54,7 +79,6 @@ public class TweetService {
     }
 
     public void removeTweet(Tweet tweet) {
-
         tweetDAO.removeTweet(tweet);
     }
 

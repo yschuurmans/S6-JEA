@@ -154,6 +154,10 @@ public class User {
         return tweets;
     }
 
+    public List<Tweet> getRecentTweets(int amount) {
+        return tweets.subList(tweets.size()-amount, tweets.size());
+    }
+
     public void setTweets(List<Tweet> tweets) {
         this.tweets = tweets;
     }

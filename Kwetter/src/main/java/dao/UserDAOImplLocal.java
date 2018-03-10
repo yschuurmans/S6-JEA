@@ -21,6 +21,8 @@ public class UserDAOImplLocal implements UserDAO {
         for (User u : users) {
             if (u.getUsername().contentEquals(user.getUsername())) return false;
         }
+        if(user.getId() == 0)
+            user.setId(Math.max(users.size(),1));
         users.add(user);
         return true;
     }

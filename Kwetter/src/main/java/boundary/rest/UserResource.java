@@ -21,6 +21,11 @@ public class UserResource {
     @Inject
     private TweetService ts;
 
+    public void setServices(UserService us, TweetService ts) {
+        this.us = us;
+        this.ts = ts;
+    }
+
     @GET
     public Response getAll() {
         return Response.ok(us.getAllUsers()).build();
@@ -41,8 +46,8 @@ public class UserResource {
 
     @POST
     @Path("{username}")
-    public Response editUser(@PathParam("username") String username, @QueryParam("bio") String bio, @QueryParam("password") String password) {
-        us.addUser(new User(username, bio, password));
+    public Response editUser(User user) {
+        us.editUser(user);
         return Response.ok().build();
     }
 
@@ -76,6 +81,12 @@ public class UserResource {
     @Path("{username}/tweets")
     public Response getUserTweets(@PathParam("username") String username) {
         return Response.ok(us.findByName(username).getTweets()).build();
+    }
+
+    @GET
+    @Path("{username}/recenttweets")
+    public Response getRecentUserTweets(@PathParam("username") String username) {
+        return Response.ok(us.findByName(username).getRecentTweets(10)).build();
     }
 
     @PUT
