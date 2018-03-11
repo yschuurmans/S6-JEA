@@ -29,6 +29,12 @@ public class TweetService {
 
     }
 
+    /**
+     * Gets the tweets from the timeline for a certain user, defined by username
+     * @param username The username of the user for which to retrieve the Timeline.
+     * @param amountTweets The amount of tweets to retrieve for the Timeline.
+     * @return A list of Tweets which represent the Timeline.
+     */
     public List<Tweet> getTimelineTweets(String username, int amountTweets) {
         User currentUser = userService.findByName(username);
         List<Tweet> timelineTweets = new ArrayList<>();
@@ -41,6 +47,11 @@ public class TweetService {
         return timelineTweets.subList(timelineTweets.size() - amountTweets, timelineTweets.size());
     }
 
+
+    /**
+     * Posts a tweet
+     * @param tweet The tweet which should be posted.
+     */
     public void addTweet(Tweet tweet) {
         //Match hastag usages within tweet content, and save these to the relevant hashtag and
         Pattern p = Pattern.compile("(?<=#)\\w++");
@@ -78,10 +89,29 @@ public class TweetService {
         userService.editUser(poster);
     }
 
+
+    /**
+     * Removes a tweet
+     * @param tweet the tweet to remove
+     */
     public void removeTweet(Tweet tweet) {
         tweetDAO.removeTweet(tweet);
     }
 
+    /**
+     * Removes a tweet, based on the ID of the tweet.
+     * @param tweetID the tweet to remove.
+     */
+    public void removeTweet(long tweetID) {
+        tweetDAO.removeTweet(getTweet(tweetID));
+    }
+
+
+    /**
+     * Marks a tweet as liked by a user.
+     * @param tweetid The tweet to like.
+     * @param username The user which liked the tweet.
+     */
     public void likeTweet(long tweetid, String username) {
         User liker = userService.findByName(username);
         Tweet likedTweet = getTweet(tweetid);
@@ -91,26 +121,55 @@ public class TweetService {
         tweetDAO.editTweet(likedTweet);
     }
 
+
+    /**
+     * Gets a tweet based on ID
+     * @param id The ID of the tweet.
+     * @return The tweet which corresponds with the ID.
+     */
     public Tweet getTweet(long id) {
         return tweetDAO.getTweet(id);
     }
 
+
+    /**
+     * Searches all tweets and returns all tweets which contain the search string.
+     * @param seartText The search string to match with the tweets.
+     * @return All tweets which contain the search string.
+     */
     public List<Tweet> searchTweets(String seartText) {
         return tweetDAO.searchTweets(seartText);
     }
 
+
+    /**
+     * Gets all tweets ever posted
+     * @return all tweets ever posted
+     */
     public List<Tweet> getAllTweets() {
         return tweetDAO.getAllTweets();
     }
 
+    /**
+     * Sets the DAO used by the service, mainly used for testing.
+     * @param tweetDAO The DAO to set
+     */
     public void setTweetDAO(TweetDAO tweetDAO) {
         this.tweetDAO = tweetDAO;
     }
 
+    /**
+     * Sets the Hashtag service used by the service, mainly used for testing.
+     * @param hashtagService The DAO to set
+     */
     public void setHashtagService(HashtagService hashtagService) {
         this.hashtagService = hashtagService;
     }
 
+    /**
+     * Sets the User service used by the service, mainly used for testing.
+     * @param userService The DAO to set
+     */
     public void setUserService(UserService userService) {
         this.userService = userService;
     }
