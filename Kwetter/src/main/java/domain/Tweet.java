@@ -1,5 +1,6 @@
 package domain;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import java.util.ArrayList;
@@ -34,10 +35,13 @@ public class Tweet {
     @ManyToOne
     private User poster;
     private String tweetContent;
+    @JsonbTransient
     @OneToMany
     public List<User> mentions;
+    @JsonbTransient
     @ManyToMany
     private List<User> likedBy;
+    @JsonbTransient
     @ManyToMany(mappedBy = "tweetsUsingHashtag", cascade = CascadeType.PERSIST)
     private List<Hashtag> hashTagsUsed;
 

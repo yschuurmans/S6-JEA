@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class HttpLogic {
     public static String getResourceUrl(HttpServletRequest request, String resourcePath) {
-        return String.format("{0}{1}",  getBaseUrl(request), resourcePath);
+        return String.format("%s%s",  getBaseUrl(request), resourcePath);
     }
 
     public static String getBaseUrl(HttpServletRequest request) {

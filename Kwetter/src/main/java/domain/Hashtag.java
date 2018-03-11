@@ -1,5 +1,6 @@
 package domain;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,7 @@ public class Hashtag {
     private long id;
     @Column(unique = true)
     private String hashtag;
+    @JsonbTransient
     @ManyToMany
     private List<Tweet> tweetsUsingHashtag;
 

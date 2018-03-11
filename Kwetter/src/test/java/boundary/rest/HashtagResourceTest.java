@@ -25,12 +25,12 @@ public class HashtagResourceTest {
     String baseURL = "hashtags/";
     @Before
     public void setUp() throws Exception {
-//        service.addHashtag(new Hashtag("TestHashtag"));
-//        service.addHashtag(new Hashtag("TestHashtag1"));
-//        service.addHashtag(new Hashtag("TestHashtag2"));
-//        service.addHashtag(new Hashtag("Test1"));
-//        service.addHashtag(new Hashtag("Test2"));
-//        service.addHashtag(new Hashtag("Test3"));
+        service.addHashtag(new Hashtag("TestHashtag"));
+        service.addHashtag(new Hashtag("TestHashtag1"));
+        service.addHashtag(new Hashtag("TestHashtag2"));
+        service.addHashtag(new Hashtag("Test1"));
+        service.addHashtag(new Hashtag("Test2"));
+        service.addHashtag(new Hashtag("Test3"));
     }
 
     @Test

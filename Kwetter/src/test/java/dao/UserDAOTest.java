@@ -63,9 +63,6 @@ public class UserDAOTest {
         User u1 = new User("User1", "bio", "password");
         User u2 = new User("User2", "bio", "password");
 
-        u1.setId(0);
-        u2.setId(1);
-
         userDAO.addUser(u1);
         userDAO.addUser(u2);
 

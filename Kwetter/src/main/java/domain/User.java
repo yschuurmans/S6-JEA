@@ -28,9 +28,12 @@ public class User {
     private String bio;
     private String password;
     private String salt;
+
+    @JsonbTransient
     @ManyToMany(mappedBy = "likedBy", cascade = CascadeType.PERSIST)
     private List<Tweet> likes;
 
+    @JsonbTransient
     @OneToMany(mappedBy = "poster", cascade = CascadeType.PERSIST)
     private List<Tweet> tweets;
 
@@ -154,7 +157,7 @@ public class User {
         return tweets;
     }
 
-    public List<Tweet> getRecentTweets(int amount) {
+    public List<Tweet> recentTweets(int amount) {
         return tweets.subList(tweets.size()-amount, tweets.size());
     }
 

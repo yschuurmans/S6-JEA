@@ -7,9 +7,16 @@ import service.UserService;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.json.JsonObject;
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.xml.ws.http.HTTPBinding;
+import java.util.ArrayList;
+import java.util.List;
 
 @Path("users")
 @Stateless
@@ -25,10 +32,14 @@ public class UserResource {
         this.us = us;
         this.ts = ts;
     }
+    @Context
+    private HttpServletRequest httpRequest;
 
     @GET
     public Response getAll() {
-        return Response.ok(us.getAllUsers()).build();
+        List<JsonObject> allUsers = new ArrayList<>();
+        us.getAllUsers().forEach(user -> allUsers.add(user.toJson(httpRequest)));
+        return Response.ok(allUsers).build();
     }
 
 
@@ -61,14 +72,16 @@ public class UserResource {
     @GET
     @Path("{username}/followers")
     public Response getUserFollowers(@PathParam("username") String username) {
-        return Response.ok(us.getUserFollowers(username)).build();
+        GenericEntity<List<User>> list = new GenericEntity<List<User>>(us.getUserFollowers(username)) {};
+        return Response.ok(list).build();
     }
 
 
     @GET
     @Path("{username}/following")
     public Response getUserFollowing(@PathParam("username") String username) {
-        return Response.ok(us.getUserFollowing(username)).build();
+        GenericEntity<List<User>> list = new GenericEntity<List<User>>(us.getUserFollowing(username)) {};
+        return Response.ok(list).build();
     }
 
     @GET
@@ -86,7 +99,7 @@ public class UserResource {
     @GET
     @Path("{username}/recenttweets")
     public Response getRecentUserTweets(@PathParam("username") String username) {
-        return Response.ok(us.findByName(username).getRecentTweets(10)).build();
+        return Response.ok(us.findByName(username).recentTweets(10)).build();
     }
 
     @PUT
