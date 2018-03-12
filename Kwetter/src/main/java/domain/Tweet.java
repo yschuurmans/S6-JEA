@@ -3,10 +3,12 @@ package domain;
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import javax.validation.constraints.Max;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@XmlRootElement
 @NamedQueries({
         @NamedQuery(name = "tweet.searchTweets", query = "SELECT t FROM Tweet t WHERE t.tweetContent LIKE :searchContent"),
         @NamedQuery(name = "tweet.findByID", query = "SELECT t FROM Tweet t WHERE t.id = :id"),
@@ -37,7 +39,7 @@ public class Tweet {
     private String tweetContent;
     @JsonbTransient
     @OneToMany
-    public List<User> mentions;
+    private List<User> mentions;
     @JsonbTransient
     @ManyToMany
     private List<User> likedBy;

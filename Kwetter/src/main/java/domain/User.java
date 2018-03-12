@@ -10,6 +10,7 @@ import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.Request;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.ArrayList;
 import java.util.List;
 

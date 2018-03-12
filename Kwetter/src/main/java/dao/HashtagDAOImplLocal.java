@@ -18,6 +18,8 @@ public class HashtagDAOImplLocal implements HashtagDAO{
 
     @Override
     public void addHashTag(Hashtag hashtag) {
+        if(hashtag.getId() == 0)
+            hashtag.setId(hashtags.size()+1);
         hashtags.add(hashtag);
     }
 

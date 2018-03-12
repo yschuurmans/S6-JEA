@@ -20,6 +20,9 @@ public class TweetDAOImplLocal implements TweetDAO {
 
     @Override
     public void addTweet(Tweet tweet) {
+
+        if(tweet.getId() == 0)
+            tweet.setId(tweets.size()+1);
         tweets.add(tweet);
     }
 

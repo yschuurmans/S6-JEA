@@ -1,8 +1,11 @@
 package boundary.rest;
 
 import domain.Hashtag;
+import domain.Tweet;
 import domain.User;
+import io.restassured.http.ContentType;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.mockito.Mock;
 import service.HashtagService;
@@ -13,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static io.restassured.RestAssured.get;
+import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.hasItems;
 import static org.junit.Assert.*;
@@ -22,15 +26,16 @@ public class HashtagResourceTest {
     @Inject
     HashtagService service;
 
-    String baseURL = "hashtags/";
-    @Before
-    public void setUp() throws Exception {
-        service.addHashtag(new Hashtag("TestHashtag"));
-        service.addHashtag(new Hashtag("TestHashtag1"));
-        service.addHashtag(new Hashtag("TestHashtag2"));
-        service.addHashtag(new Hashtag("Test1"));
-        service.addHashtag(new Hashtag("Test2"));
-        service.addHashtag(new Hashtag("Test3"));
+    String baseURL = "Kwetter/hashtags/";
+    @BeforeClass
+    public static void setUp() throws Exception {
+        given().body ("{ \"id\": 0, \"tweetContent\": \"##TestHashtag it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/users/Youri/tweets").then().statusCode(200);
+        given().body ("{ \"id\": 0, \"tweetContent\": \"##TestHashtag1 it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/users/Youri/tweets").then().statusCode(200);
+        given().body ("{ \"id\": 0, \"tweetContent\": \"##TestHashtag2 it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/users/Youri/tweets").then().statusCode(200);
+        given().body ("{ \"id\": 0, \"tweetContent\": \"#Test1 it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/users/Youri/tweets").then().statusCode(200);
+        given().body ("{ \"id\": 0, \"tweetContent\": \"#Test2 it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/users/Youri/tweets").then().statusCode(200);
+        given().body ("{ \"id\": 0, \"tweetContent\": \"#Test3 it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/users/Youri/tweets").then().statusCode(200);
+
     }
 
     @Test
@@ -61,7 +66,7 @@ public class HashtagResourceTest {
                 "Test2",
                 "Test3"));
 
-        get(baseURL + "search/Hashtag").then().body("hashtag", hasItems(
+        get(baseURL + "search/TestHashtag").then().body("hashtag", hasItems(
                 "TestHashtag",
                 "TestHashtag1",
                 "TestHashtag2"));
