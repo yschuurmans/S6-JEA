@@ -26,15 +26,15 @@ public class HashtagResourceTest {
     @Inject
     HashtagService service;
 
-    String baseURL = "Kwetter/hashtags/";
+    String baseURL = "Kwetter/api/hashtags/";
     @BeforeClass
     public static void setUp() throws Exception {
-        given().body ("{ \"id\": 0, \"tweetContent\": \"##TestHashtag it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/users/Youri/tweets").then().statusCode(200);
-        given().body ("{ \"id\": 0, \"tweetContent\": \"##TestHashtag1 it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/users/Youri/tweets").then().statusCode(200);
-        given().body ("{ \"id\": 0, \"tweetContent\": \"##TestHashtag2 it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/users/Youri/tweets").then().statusCode(200);
-        given().body ("{ \"id\": 0, \"tweetContent\": \"#Test1 it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/users/Youri/tweets").then().statusCode(200);
-        given().body ("{ \"id\": 0, \"tweetContent\": \"#Test2 it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/users/Youri/tweets").then().statusCode(200);
-        given().body ("{ \"id\": 0, \"tweetContent\": \"#Test3 it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/users/Youri/tweets").then().statusCode(200);
+        given().body ("{ \"id\": 0, \"tweetContent\": \"##TestHashtag it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/api/users/Youri/tweets").then().statusCode(200);
+        given().body ("{ \"id\": 0, \"tweetContent\": \"##TestHashtag1 it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/api/users/Youri/tweets").then().statusCode(200);
+        given().body ("{ \"id\": 0, \"tweetContent\": \"##TestHashtag2 it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/api/users/Youri/tweets").then().statusCode(200);
+        given().body ("{ \"id\": 0, \"tweetContent\": \"#Test1 it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/api/users/Youri/tweets").then().statusCode(200);
+        given().body ("{ \"id\": 0, \"tweetContent\": \"#Test2 it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/api/users/Youri/tweets").then().statusCode(200);
+        given().body ("{ \"id\": 0, \"tweetContent\": \"#Test3 it work? is interessant\" }").when ().contentType (ContentType.JSON).put("Kwetter/api/users/Youri/tweets").then().statusCode(200);
 
     }
 
