@@ -1,47 +1,77 @@
 package dao;
 
 import domain.Hashtag;
-import org.junit.Assert;
-import org.junit.BeforeClass;
+import org.junit.Before;
 import org.junit.Test;
+import util.DatabaseCleaner;
 
-import javax.enterprise.inject.Default;
-import javax.inject.Inject;
-import javax.validation.constraints.AssertTrue;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
 
+import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import static org.junit.Assert.*;
 
-public class HashtagDAOTest {
+public class HashtagDAOJPATest {
 
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("KwetterTest");
+    private EntityManager em;
+    private EntityTransaction tx;
+    private HashtagDAOImplJPA hashtagDAO;
+
+    @Before
+    public void setUp() {
+        try {
+            new DatabaseCleaner(emf.createEntityManager()).clean();
+        } catch (SQLException ex) {
+            Logger.getLogger(HashtagDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        em = emf.createEntityManager();
+        tx = em.getTransaction();
+
+        hashtagDAO = new HashtagDAOImplJPA();
+        hashtagDAO.setEm(em);
+    }
 
     @Test
     public void addHashTag() {
-        HashtagDAO hashtagDAO = new HashtagDAOImplLocal();
         Hashtag ht1 = new Hashtag("TestHashtag");
         Hashtag ht2 = new Hashtag("TestHashtag2");
 
+        tx.begin();
         hashtagDAO.addHashTag(ht1);
         hashtagDAO.addHashTag(ht2);
+        tx.commit();
 
-        assertEquals(hashtagDAO.getAllHashtags().size(),2);
+        tx.begin();
+        int count = hashtagDAO.getAllHashtags().size();
+        tx.commit();
+
+        assertEquals(count, 2);
     }
 
     @Test
     public void removeHashTag() {
-        HashtagDAO hashtagDAO = new HashtagDAOImplLocal();
         Hashtag ht1 = new Hashtag("TestHashtag");
         Hashtag ht2 = new Hashtag("TestHashtag2");
 
+        tx.begin();
         hashtagDAO.addHashTag(ht1);
         hashtagDAO.addHashTag(ht2);
+        tx.commit();
 
-        assertEquals(hashtagDAO.getAllHashtags().size(),2);
+        assertEquals(hashtagDAO.getAllHashtags().size(), 2);
 
+        tx.begin();
         hashtagDAO.removeHashTag(hashtagDAO.findHashtag("TestHashtag"));
+        tx.commit();
 
-        assertEquals(hashtagDAO.getAllHashtags().size(),1);
+        assertEquals(hashtagDAO.getAllHashtags().size(), 1);
 
         assertNotNull(hashtagDAO.findHashtag("TestHashtag2"));
         assertEquals(hashtagDAO.findHashtag("TestHashtag2"), ht2);
@@ -49,7 +79,6 @@ public class HashtagDAOTest {
 
     @Test
     public void findHashtag() {
-        HashtagDAO hashtagDAO = new HashtagDAOImplLocal();
         Hashtag ht1 = new Hashtag("TestHashtag");
         Hashtag ht2 = new Hashtag("TestHashtag2");
         Hashtag ht3 = new Hashtag("TestHashtag3");
@@ -60,7 +89,7 @@ public class HashtagDAOTest {
         hashtagDAO.addHashTag(ht3);
         hashtagDAO.addHashTag(ht4);
 
-        assertEquals(hashtagDAO.getAllHashtags().size(),4);
+        assertEquals(hashtagDAO.getAllHashtags().size(), 4);
 
         assertEquals(hashtagDAO.findHashtag("TestHashtag"), ht1);
         assertEquals(hashtagDAO.findHashtag("TestHashtag2"), ht2);
@@ -80,7 +109,6 @@ public class HashtagDAOTest {
 
     @Test
     public void getAllHashtags() {
-        HashtagDAO hashtagDAO = new HashtagDAOImplLocal();
         Hashtag ht1 = new Hashtag("TestHashtag");
         Hashtag ht2 = new Hashtag("TestHashtag2");
         Hashtag ht3 = new Hashtag("TestHashtag3");
@@ -91,7 +119,7 @@ public class HashtagDAOTest {
         hashtagDAO.addHashTag(ht3);
         hashtagDAO.addHashTag(ht4);
 
-        assertEquals(hashtagDAO.getAllHashtags().size(),4);
+        assertEquals(hashtagDAO.getAllHashtags().size(), 4);
         List<Hashtag> allHashtags = hashtagDAO.getAllHashtags();
 
         assertTrue(allHashtags.contains(ht1));
@@ -105,7 +133,7 @@ public class HashtagDAOTest {
         hashtagDAO.addHashTag(ht5);
         hashtagDAO.addHashTag(ht6);
 
-        assertEquals(hashtagDAO.getAllHashtags().size(),6);
+        assertEquals(hashtagDAO.getAllHashtags().size(), 6);
 
         List<Hashtag> allHashtags2 = hashtagDAO.getAllHashtags();
 
@@ -119,7 +147,6 @@ public class HashtagDAOTest {
 
     @Test
     public void searchHashtags() {
-        HashtagDAO hashtagDAO = new HashtagDAOImplLocal();
         Hashtag ht1 = new Hashtag("Omg");
         Hashtag ht2 = new Hashtag("OMG");
         Hashtag ht3 = new Hashtag("O");
@@ -130,7 +157,7 @@ public class HashtagDAOTest {
         hashtagDAO.addHashTag(ht3);
         hashtagDAO.addHashTag(ht4);
 
-        assertEquals(hashtagDAO.getAllHashtags().size(),4);
+        assertEquals(hashtagDAO.getAllHashtags().size(), 4);
         List<Hashtag> allHashtags = hashtagDAO.getAllHashtags();
 
         assertTrue(allHashtags.contains(ht1));
@@ -144,7 +171,7 @@ public class HashtagDAOTest {
         hashtagDAO.addHashTag(ht5);
         hashtagDAO.addHashTag(ht6);
 
-        assertEquals(hashtagDAO.getAllHashtags().size(),6);
+        assertEquals(hashtagDAO.getAllHashtags().size(), 6);
 
         List<Hashtag> allHashtags2 = hashtagDAO.getAllHashtags();
 

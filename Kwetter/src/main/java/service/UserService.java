@@ -9,6 +9,7 @@ import java.util.List;
 
 public class UserService {
     @Inject
+    @JPA
     private UserDAO userDAO;
 
     public UserService() {

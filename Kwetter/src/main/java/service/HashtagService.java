@@ -1,5 +1,6 @@
 package service;
 
+import Annotations.JPA;
 import dao.HashtagDAO;
 import domain.Hashtag;
 
@@ -9,6 +10,7 @@ import java.util.List;
 public class HashtagService {
 
     @Inject
+    @JPA
     private HashtagDAO hashtagDAO;
 
     public HashtagService(){

@@ -2,6 +2,7 @@ package dao;
 
 import domain.Hashtag;
 
+import javax.persistence.EntityManager;
 import java.util.List;
 
 public interface HashtagDAO {

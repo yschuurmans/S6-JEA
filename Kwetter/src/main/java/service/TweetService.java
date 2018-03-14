@@ -1,5 +1,6 @@
 package service;
 
+import Annotations.JPA;
 import dao.TweetDAO;
 import dao.UserDAO;
 import domain.Hashtag;
@@ -15,6 +16,7 @@ import java.util.regex.Pattern;
 public class TweetService {
 
     @Inject
+    @JPA
     private TweetDAO tweetDAO;
 
     @Inject
@@ -57,6 +59,8 @@ public class TweetService {
         Pattern p = Pattern.compile("(?<=#)\\w++");
         Matcher m = p.matcher(tweet.getTweetContent());
         List<Hashtag> usedHashtags = new ArrayList<>();
+
+        tweetDAO.addTweet(tweet);
         while (m.find()) {
             String tagString = m.group();
             Hashtag hashtag = hashtagService.findHashtag(tagString);
@@ -80,10 +84,9 @@ public class TweetService {
             }
 
         }
-
+        tweetDAO.editTweet(tweet);
         tweet.setHashTagsUsed(usedHashtags);
         tweet.setMentions(usedMentions);
-        tweetDAO.addTweet(tweet);
         User poster = tweet.getPoster();
         poster.getTweets().add(tweet);
         userService.editUser(poster);

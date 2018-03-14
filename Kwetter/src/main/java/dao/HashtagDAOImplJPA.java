@@ -63,4 +63,8 @@ public class HashtagDAOImplJPA implements HashtagDAO {
             return false;
         }
     }
+
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
 }

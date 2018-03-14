@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class TweetDAOTest {
+public class TweetDAOLocalTest {
     @Test
     public void addTweet() {
         User user = new User("Youri", "bio", "password");
