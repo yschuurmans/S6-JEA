@@ -11,9 +11,9 @@ import java.sql.SQLException;
 public class DatabaseCleaner {
 
     private static final Class<?>[] ENTITY_TYPES = {
+            Tweet.class,
             Hashtag.class,
             User.class,
-            Tweet.class,
     };
     private final EntityManager em;
 

@@ -84,10 +84,12 @@ public class HashtagDAOJPATest {
         Hashtag ht3 = new Hashtag("TestHashtag3");
         Hashtag ht4 = new Hashtag("TestHashtag4");
 
+        tx.begin();
         hashtagDAO.addHashTag(ht1);
         hashtagDAO.addHashTag(ht2);
         hashtagDAO.addHashTag(ht3);
         hashtagDAO.addHashTag(ht4);
+        tx.commit();
 
         assertEquals(hashtagDAO.getAllHashtags().size(), 4);
 
@@ -114,10 +116,12 @@ public class HashtagDAOJPATest {
         Hashtag ht3 = new Hashtag("TestHashtag3");
         Hashtag ht4 = new Hashtag("TestHashtag4");
 
+        tx.begin();
         hashtagDAO.addHashTag(ht1);
         hashtagDAO.addHashTag(ht2);
         hashtagDAO.addHashTag(ht3);
         hashtagDAO.addHashTag(ht4);
+        tx.commit();
 
         assertEquals(hashtagDAO.getAllHashtags().size(), 4);
         List<Hashtag> allHashtags = hashtagDAO.getAllHashtags();
@@ -130,35 +134,44 @@ public class HashtagDAOJPATest {
         Hashtag ht5 = new Hashtag("TestHashtag5");
         Hashtag ht6 = new Hashtag("TestHashtag6");
 
+        tx.begin();
         hashtagDAO.addHashTag(ht5);
         hashtagDAO.addHashTag(ht6);
+        tx.commit();
 
         assertEquals(hashtagDAO.getAllHashtags().size(), 6);
 
         List<Hashtag> allHashtags2 = hashtagDAO.getAllHashtags();
 
-        assertTrue(allHashtags.contains(ht1));
-        assertTrue(allHashtags.contains(ht2));
-        assertTrue(allHashtags.contains(ht3));
-        assertTrue(allHashtags.contains(ht4));
-        assertTrue(allHashtags.contains(ht5));
-        assertTrue(allHashtags.contains(ht6));
+        assertTrue(allHashtags2.contains(ht1));
+        assertTrue(allHashtags2.contains(ht2));
+        assertTrue(allHashtags2.contains(ht3));
+        assertTrue(allHashtags2.contains(ht4));
+        assertTrue(allHashtags2.contains(ht5));
+        assertTrue(allHashtags2.contains(ht6));
     }
 
     @Test
     public void searchHashtags() {
         Hashtag ht1 = new Hashtag("Omg");
-        Hashtag ht2 = new Hashtag("OMG");
-        Hashtag ht3 = new Hashtag("O");
-        Hashtag ht4 = new Hashtag("O");
+        Hashtag ht2 = new Hashtag("OMGgg");
+        Hashtag ht3 = new Hashtag("MG");
+        Hashtag ht4 = new Hashtag("OM");
 
+        tx.begin();
         hashtagDAO.addHashTag(ht1);
         hashtagDAO.addHashTag(ht2);
         hashtagDAO.addHashTag(ht3);
         hashtagDAO.addHashTag(ht4);
+        tx.commit();
 
         assertEquals(hashtagDAO.getAllHashtags().size(), 4);
+        assertEquals(hashtagDAO.searchHashtags("O").size(), 3);
+        assertEquals(hashtagDAO.searchHashtags("OmG").size(), 2);
+
+        tx.begin();
         List<Hashtag> allHashtags = hashtagDAO.getAllHashtags();
+        tx.commit();
 
         assertTrue(allHashtags.contains(ht1));
         assertTrue(allHashtags.contains(ht2));
@@ -168,18 +181,25 @@ public class HashtagDAOJPATest {
         Hashtag ht5 = new Hashtag("TestHashtag5");
         Hashtag ht6 = new Hashtag("TestHashtag6");
 
+        tx.begin();
         hashtagDAO.addHashTag(ht5);
         hashtagDAO.addHashTag(ht6);
+        tx.commit();
 
         assertEquals(hashtagDAO.getAllHashtags().size(), 6);
+        assertEquals(hashtagDAO.searchHashtags("O").size(), 3);
+        assertEquals(hashtagDAO.searchHashtags("OmG").size(), 2);
+        assertEquals(hashtagDAO.searchHashtags("Test").size(), 2);
+        assertEquals(hashtagDAO.searchHashtags("Q").size(), 0);
+        assertEquals(hashtagDAO.searchHashtags("M").size(), 1);
 
         List<Hashtag> allHashtags2 = hashtagDAO.getAllHashtags();
 
-        assertTrue(allHashtags.contains(ht1));
-        assertTrue(allHashtags.contains(ht2));
-        assertTrue(allHashtags.contains(ht3));
-        assertTrue(allHashtags.contains(ht4));
-        assertTrue(allHashtags.contains(ht5));
-        assertTrue(allHashtags.contains(ht6));
+        assertTrue(allHashtags2.contains(ht1));
+        assertTrue(allHashtags2.contains(ht2));
+        assertTrue(allHashtags2.contains(ht3));
+        assertTrue(allHashtags2.contains(ht4));
+        assertTrue(allHashtags2.contains(ht5));
+        assertTrue(allHashtags2.contains(ht6));
     }
 }

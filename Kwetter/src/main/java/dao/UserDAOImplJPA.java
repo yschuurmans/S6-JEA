@@ -76,4 +76,7 @@ public class UserDAOImplJPA implements UserDAO {
     }
 
 
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
 }

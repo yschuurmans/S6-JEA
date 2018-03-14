@@ -61,4 +61,8 @@ public class TweetDAOImplJPA implements TweetDAO {
             return false;
         }
     }
+
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
 }
