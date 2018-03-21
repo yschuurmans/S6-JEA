@@ -92,8 +92,6 @@ public class TweetDAOLocalTest {
         TweetDAO tweetDAO = new TweetDAOImplLocal();
         Tweet tw1 = new Tweet(user, "testTweet1");
         Tweet tw2 = new Tweet(user, "testTweet2");
-        tw1.setId(0);
-        tw2.setId(1);
 
         tweetDAO.addTweet(tw1);
         tweetDAO.addTweet(tw2);

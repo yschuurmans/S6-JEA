@@ -20,7 +20,7 @@ public class UserDAOJPATest {
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("KwetterTest");
     private EntityManager em;
     private EntityTransaction tx;
-    private TweetDAOImplJPA tweetDAO;
+    private UserDAOImplJPA userDAO;
 
     @Before
     public void setUp() {
@@ -32,8 +32,8 @@ public class UserDAOJPATest {
         em = emf.createEntityManager();
         tx = em.getTransaction();
 
-        tweetDAO = new TweetDAOImplJPA();
-        tweetDAO.setEm(em);
+        userDAO = new UserDAOImplJPA();
+        userDAO.setEm(em);
     }
 
     @Test
@@ -43,9 +43,13 @@ public class UserDAOJPATest {
         User u2 = new User("User2", "bio", "password");
 
         assertEquals(userDAO.getAllUsers().size(),0);
+        tx.begin();
         userDAO.addUser(u1);
+        tx.commit();
         assertEquals(userDAO.getAllUsers().size(),1);
+        tx.begin();
         userDAO.addUser(u2);
+        tx.commit();
         assertEquals(userDAO.getAllUsers().size(),2);
 
     }
@@ -56,14 +60,20 @@ public class UserDAOJPATest {
         User u1 = new User("User1", "bio", "password");
         User u2 = new User("User2", "bio", "password");
 
+        tx.begin();
         userDAO.addUser(u1);
         userDAO.addUser(u2);
+        tx.commit();
 
 
         assertEquals(userDAO.getAllUsers().size(),2);
+        tx.begin();
         userDAO.removeUser(u1);
+        tx.commit();
         assertEquals(userDAO.getAllUsers().size(),1);
+        tx.begin();
         userDAO.removeUser(u2);
+        tx.commit();
         assertEquals(userDAO.getAllUsers().size(),0);
 
     }
@@ -74,8 +84,10 @@ public class UserDAOJPATest {
         User u1 = new User("User1", "bio", "password");
         User u2 = new User("User2", "bio", "password");
 
+        tx.begin();
         userDAO.addUser(u1);
         userDAO.addUser(u2);
+        tx.commit();
 
         assertEquals(userDAO.findUserByName("User1"), u1);
         assertEquals(userDAO.findUserByName("User2"), u2);
@@ -87,8 +99,10 @@ public class UserDAOJPATest {
         User u1 = new User("User1", "bio", "password");
         User u2 = new User("User2", "bio", "password");
 
+        tx.begin();
         userDAO.addUser(u1);
         userDAO.addUser(u2);
+        tx.commit();
 
         User u1C = userDAO.findUserByName("User1");
         User u2C = userDAO.findUserByName("User2");
@@ -105,13 +119,21 @@ public class UserDAOJPATest {
         User u2 = new User("User2", "bio", "password");
 
         assertEquals(userDAO.getAllUsers().size(),0);
+        tx.begin();
         userDAO.addUser(u1);
+        tx.commit();
         assertEquals(userDAO.getAllUsers().size(),1);
+        tx.begin();
         userDAO.addUser(u2);
+        tx.commit();
         assertEquals(userDAO.getAllUsers().size(),2);
+        tx.begin();
         userDAO.removeUser(u1);
+        tx.commit();
         assertEquals(userDAO.getAllUsers().size(),1);
+        tx.begin();
         userDAO.removeUser(u2);
+        tx.commit();
         assertEquals(userDAO.getAllUsers().size(),0);
     }
 

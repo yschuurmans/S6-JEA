@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.Request;
 import javax.xml.bind.annotation.XmlTransient;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -26,9 +27,18 @@ public class User {
     private long id;
     @Column(unique = true)
     private String username;
-    private String bio;
     private String password;
     private String salt;
+    private String bio;
+
+    @JoinTable(name = "User_PermissionGroup",
+            joinColumns
+                    = @JoinColumn(name = "Username", referencedColumnName = "username"),
+            inverseJoinColumns
+                    = @JoinColumn(name = "GroupName", referencedColumnName = "groupName")
+    )
+    @ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
+    private Collection<PermissionGroup> permissionGroups = new ArrayList<>();
 
     @JsonbTransient
     @ManyToMany(mappedBy = "likedBy", cascade = CascadeType.PERSIST)
@@ -165,4 +175,13 @@ public class User {
     public void setTweets(List<Tweet> tweets) {
         this.tweets = tweets;
     }
+
+    public Collection<PermissionGroup> getPermissionGroups() {
+        return permissionGroups;
+    }
+
+    public void setPermissionGroups(Collection<PermissionGroup> permissionGroups) {
+        this.permissionGroups = permissionGroups;
+    }
+
 }

@@ -1,14 +1,14 @@
 package service;
 
-import domain.Hashtag;
+import Logic.PasswordHash;
+import dao.PermissionGroupDAO;
+import domain.PermissionGroup;
 import domain.Tweet;
 import domain.User;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.inject.Inject;
-import java.util.ArrayList;
-import java.util.List;
 
 @Singleton
 @javax.ejb.Startup
@@ -20,15 +20,27 @@ public class Startup {
     private TweetService tweetService;
     @Inject
     private HashtagService hashtagService;
+    @Inject
+    PermissionGroupDAO groupDaoJPA;
 
     public Startup() {
     }
 
     @PostConstruct
     private void initData() {
-        User Youri = new User("Youri", "Oss", "YourisPassword");
-        User Ken = new User("Ken", "KutDorp", "KensPassword");
-        User Mike = new User("Mike", "NogEenKutdorp", "MikesPassword");
+        User Youri = new User("Youri", "Oss", PasswordHash.stringToHash("Youri"));
+        User Ken = new User("Ken", "KutDorp", PasswordHash.stringToHash("Ken"));
+        User Mike = new User("Mike", "NogEenKutdorp", PasswordHash.stringToHash("Mike"));
+        PermissionGroup adminGroup = new PermissionGroup(PermissionGroup.ADMIN_GROUP);
+        PermissionGroup modGroup = new PermissionGroup(PermissionGroup.MODERATOR_GROUP);
+        PermissionGroup userGroup = new PermissionGroup(PermissionGroup.USER_GROUP);
+        groupDaoJPA.create(adminGroup);
+        groupDaoJPA.create(modGroup);
+        groupDaoJPA.create(userGroup);
+
+        Youri.getPermissionGroups().add(adminGroup);
+        Mike.getPermissionGroups().add(modGroup);
+        Ken.getPermissionGroups().add(userGroup);
 
         userService.addUser(Youri);
         userService.addUser(Ken);
