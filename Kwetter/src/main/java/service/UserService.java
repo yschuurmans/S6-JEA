@@ -4,9 +4,11 @@ import Annotations.JPA;
 import dao.UserDAO;
 import domain.User;
 
+import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.util.List;
 
+@Stateless
 public class UserService {
     @Inject
     @JPA

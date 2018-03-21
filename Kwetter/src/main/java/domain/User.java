@@ -4,13 +4,9 @@ import Logic.HttpLogic;
 
 import javax.json.Json;
 import javax.json.JsonObject;
-import javax.json.bind.annotation.JsonbAnnotation;
-import javax.json.bind.annotation.JsonbProperty;
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import javax.servlet.http.HttpServletRequest;
-import javax.ws.rs.core.Request;
-import javax.xml.bind.annotation.XmlTransient;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -182,6 +178,35 @@ public class User {
 
     public void setPermissionGroups(Collection<PermissionGroup> permissionGroups) {
         this.permissionGroups = permissionGroups;
+    }
+
+    public Role getPermissionGroup() {
+        if(permissionGroups == null) return null;
+        switch(((PermissionGroup)permissionGroups.toArray()[0]).getGroupName()) {
+            case PermissionGroup.ADMIN_GROUP_NAME:
+                return Role.Admin;
+            case PermissionGroup.MODERATOR_GROUP_NAME:
+                return Role.Moderator;
+            case PermissionGroup.USER_GROUP_NAME:
+                return Role.User;
+            default :
+                return null;
+        }
+    }
+
+    public void setPermissionGroup(Role newRole) {
+        permissionGroups.clear();
+        switch(newRole) {
+            case Admin:
+                permissionGroups.add(PermissionGroup.ADMIN_GROUP);
+                break;
+            case Moderator:
+                permissionGroups.add(PermissionGroup.MODERATOR_GROUP);
+                break;
+            case User:
+                permissionGroups.add(PermissionGroup.USER_GROUP);
+                break;
+        }
     }
 
 }

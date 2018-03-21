@@ -7,12 +7,14 @@ import domain.Hashtag;
 import domain.Tweet;
 import domain.User;
 
+import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@Stateless
 public class TweetService {
 
     @Inject

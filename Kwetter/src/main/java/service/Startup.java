@@ -9,6 +9,7 @@ import domain.User;
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.inject.Inject;
+import java.security.Permission;
 
 @Singleton
 @javax.ejb.Startup
@@ -31,16 +32,13 @@ public class Startup {
         User Youri = new User("Youri", "Oss", PasswordHash.stringToHash("Youri"));
         User Ken = new User("Ken", "KutDorp", PasswordHash.stringToHash("Ken"));
         User Mike = new User("Mike", "NogEenKutdorp", PasswordHash.stringToHash("Mike"));
-        PermissionGroup adminGroup = new PermissionGroup(PermissionGroup.ADMIN_GROUP);
-        PermissionGroup modGroup = new PermissionGroup(PermissionGroup.MODERATOR_GROUP);
-        PermissionGroup userGroup = new PermissionGroup(PermissionGroup.USER_GROUP);
-        groupDaoJPA.create(adminGroup);
-        groupDaoJPA.create(modGroup);
-        groupDaoJPA.create(userGroup);
+        groupDaoJPA.create(PermissionGroup.ADMIN_GROUP);
+        groupDaoJPA.create(PermissionGroup.MODERATOR_GROUP);
+        groupDaoJPA.create(PermissionGroup.USER_GROUP);
 
-        Youri.getPermissionGroups().add(adminGroup);
-        Mike.getPermissionGroups().add(modGroup);
-        Ken.getPermissionGroups().add(userGroup);
+        Youri.getPermissionGroups().add(PermissionGroup.ADMIN_GROUP);
+        Mike.getPermissionGroups().add(PermissionGroup.MODERATOR_GROUP);
+        Ken.getPermissionGroups().add(PermissionGroup.USER_GROUP);
 
         userService.addUser(Youri);
         userService.addUser(Ken);

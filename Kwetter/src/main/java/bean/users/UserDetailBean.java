@@ -1,4 +1,4 @@
-package bean;
+package bean.users;
 
 import domain.User;
 import service.UserService;

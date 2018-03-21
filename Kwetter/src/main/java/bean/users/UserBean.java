@@ -1,20 +1,37 @@
-package bean;
+package bean.users;
 
+import domain.PermissionGroup;
+import domain.Role;
 import domain.User;
 import service.UserService;
 
 import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.SessionScoped;
+import javax.faces.model.SelectItem;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Named(value = "userBean")
-@RequestScoped
-public class UserBean {
+@ViewScoped
+public class UserBean implements Serializable {
 
     @Inject
     private UserService userService;
+
+    private List<User> users;
+
+    public UserService getUserService() {
+        return userService;
+    }
+
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
 
     private String username;
     private String password;
@@ -22,6 +39,19 @@ public class UserBean {
     private String salt;
 
     private String filter;
+
+    public UserBean() {
+    }
+
+
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
 
     public String getFilter() {
         return filter;
@@ -31,17 +61,25 @@ public class UserBean {
         this.filter = filter;
     }
 
-    public List<User> getUsers() {
+    public void initUsers() {
+        try {
+            this.users = userService.getAllUsers();
+        }
+        catch (Exception e) {}
+
+    }
+
+    public List<User> getFilteredUsers() {
         if (filter != null && filter.length() > 0) {
             ArrayList<User> filtered = new ArrayList<>();
-            for (User s : userService.getAllUsers()) {
+            for (User s : users) {
                 if (s.getUsername().toLowerCase().contains(filter)) {
                     filtered.add(s);
                 }
             }
             return filtered;
         } else {
-            return userService.getAllUsers();
+            return users;
         }
     }
 
@@ -52,6 +90,10 @@ public class UserBean {
     public void addUser() {
         User user = new User(username, bio, password);
         userService.addUser(user);
+    }
+
+    public void editUser(User user) {
+        userService.editUser(user);
     }
 
 
@@ -85,5 +127,13 @@ public class UserBean {
 
     public void setSalt(String salt) {
         this.salt = salt;
+    }
+
+    public List<SelectItem> getRoleList() {
+        List<SelectItem> returnList = new ArrayList<>();
+        for (Role role : Role.values()) {
+            returnList.add(new SelectItem(role));
+        }
+        return returnList;
     }
 }

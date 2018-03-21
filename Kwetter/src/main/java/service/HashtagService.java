@@ -4,9 +4,11 @@ import Annotations.JPA;
 import dao.HashtagDAO;
 import domain.Hashtag;
 
+import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.util.List;
 
+@Stateless
 public class HashtagService {
 
     @Inject
