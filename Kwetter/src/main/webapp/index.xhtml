@@ -22,14 +22,14 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Users</div>
                 <div class="panel-body">
-                    <!--<h:panelGroup>-->
-                        <!--<h:form>-->
-                            <!--<h:outputLabel value="Filter: "/>-->
-                            <!--<h:inputText value="#{userBean.filter}" id="filter">-->
-                                <!--<f:ajax event="keyup" execute="filter" render="users"/>-->
-                            <!--</h:inputText>-->
-                        <!--</h:form>-->
-                    <!--</h:panelGroup>-->
+                    <h:panelGroup>
+                        <h:form>
+                            <h:outputLabel value="Filter: "/>
+                            <h:inputText value="#{userBean.filter}" id="filter">
+                                <f:ajax event="keyup" execute="filter" render="users"/>
+                            </h:inputText>
+                        </h:form>
+                    </h:panelGroup>
                     <h:panelGroup id="users">
                         <h:form class="well">
                             <h:dataTable class="table" value="#{userBean.users}" var="user">

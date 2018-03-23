@@ -46,7 +46,19 @@ public class UserBean implements Serializable {
 
 
     public List<User> getUsers() {
-        return users;
+        if (filter != null && filter.length() > 0) {
+            ArrayList<User> filtered = new ArrayList<>();
+            for (User s : users) {
+                if (s.getUsername().toLowerCase().contains(filter.toLowerCase())) {
+                    filtered.add(s);
+                }
+            }
+            return filtered;
+        } else {
+            return users;
+        }
+
+        //return users;
     }
 
     public void setUsers(List<User> users) {
@@ -69,22 +81,10 @@ public class UserBean implements Serializable {
 
     }
 
-    public List<User> getFilteredUsers() {
-        if (filter != null && filter.length() > 0) {
-            ArrayList<User> filtered = new ArrayList<>();
-            for (User s : users) {
-                if (s.getUsername().toLowerCase().contains(filter)) {
-                    filtered.add(s);
-                }
-            }
-            return filtered;
-        } else {
-            return users;
-        }
-    }
-
     public void removeUser(User user) {
-        userService.removeUser(user);
+        User realUser = userService.getUser(user.getId());
+        userService.removeUser(realUser.getUsername());
+        initUsers();
     }
 
     public void addUser() {
@@ -93,7 +93,9 @@ public class UserBean implements Serializable {
     }
 
     public void editUser(User user) {
-        userService.editUser(user);
+        User oldUser = userService.getUser(user.getId());
+        oldUser.setPermissionGroup(user.getPermissionGroup());
+        userService.editUser(oldUser);
     }
 
 

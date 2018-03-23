@@ -53,14 +53,16 @@ public class User {
     private List<User> following;
 
     public User(String username, String bio, String password) {
-        this.username = username;
-        this.bio = bio;
-        this.password = password;
-
         likes = new ArrayList<>();
         tweets = new ArrayList<>();
         followers = new ArrayList<>();
         following = new ArrayList<>();
+        permissionGroups = new ArrayList<>();
+
+        this.username = username;
+        this.bio = bio;
+        this.password = password;
+        setPermissionGroup(Role.User);
     }
 
     public User() {
@@ -68,6 +70,9 @@ public class User {
         tweets = new ArrayList<>();
         followers = new ArrayList<>();
         following = new ArrayList<>();
+        permissionGroups = new ArrayList<>();
+        setPermissionGroup(Role.User);
+
     }
 
     public JsonObject toJson(HttpServletRequest request) {

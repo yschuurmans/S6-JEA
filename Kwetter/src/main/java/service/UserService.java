@@ -73,7 +73,7 @@ public class UserService {
      * @param id the ID of the user to find.
      * @return the user
      */
-    public User getUser(int id) {
+    public User getUser(long id) {
         return userDAO.getUser(id);
     }
 

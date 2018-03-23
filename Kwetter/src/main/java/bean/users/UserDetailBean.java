@@ -44,4 +44,8 @@ public class UserDetailBean {
     public String selectUsers() {
         return "user?faces-redirect=true";
     }
+
+    public void removeTweet() {
+        userService.removeUser(user);
+    }
 }

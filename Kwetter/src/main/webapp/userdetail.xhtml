@@ -24,6 +24,13 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Users</div>
                 <div class="panel-body">
+
+                    <h:form>
+                        <h:outputLink value="index.xhtml" class="btn btn-primary">
+                            Back to users
+                        </h:outputLink>
+                    </h:form>
+
                     <h:panelGrid columns="2">
                         <h:outputLabel value="Username:"/>
                         <h:outputLabel value="#{userDetailBean.user.username}"/>
@@ -35,11 +42,25 @@
                         <h:outputLabel value="#{userDetailBean.user.salt}"/>
                     </h:panelGrid>
 
-                    <h:form>
-                        <h:outputLink value="index.xhtml" class="btn btn-primary">
-                            Back to users
-                        </h:outputLink>
-                    </h:form>
+                    <hr/>
+
+                    <h:panelGroup id="tweets">
+                        <h:form class="well">
+                            <h:dataTable class="table" value="#{userDetailBean.user.tweets}" var="tweet">
+                                <h:column>
+                                    <f:facet name="header">Tweets</f:facet>
+                                    <h:outputLabel value="#{tweet.tweetContent}"/>
+                                </h:column>
+                                <h:column>
+                                    <h:commandLink class="btn btn-danger" value="Remove" action="#{userDetailBean.removeTweet(tweet)}">
+                                        <f:ajax event="action" render="tweets"/>
+                                    </h:commandLink>
+                                </h:column>
+
+                            </h:dataTable>
+                        </h:form>
+                    </h:panelGroup>
+
                 </div>
             </div>
         </div>
