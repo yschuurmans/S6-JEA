@@ -108,7 +108,11 @@ public class TweetService {
      * @param tweetID the tweet to remove.
      */
     public void removeTweet(long tweetID) {
-        tweetDAO.removeTweet(getTweet(tweetID));
+        Tweet tweet = getTweet(tweetID);
+        User poster = tweet.getPoster();
+        poster.getTweets().remove(tweet);
+        userService.editUser(poster);
+        tweetDAO.removeTweet(tweet);
     }
 
 

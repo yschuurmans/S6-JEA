@@ -48,16 +48,27 @@
                         <h:form class="well">
                             <h:dataTable class="table" value="#{userDetailBean.user.tweets}" var="tweet">
                                 <h:column>
+                                    <f:facet name="header">TweetID</f:facet>
+                                    <h:outputLabel value="#{tweet.id}"/>
+                                </h:column>
+                                <h:column>
                                     <f:facet name="header">Tweets</f:facet>
                                     <h:outputLabel value="#{tweet.tweetContent}"/>
                                 </h:column>
                                 <h:column>
-                                    <h:commandLink class="btn btn-danger" value="Remove" action="#{userDetailBean.removeTweet(tweet)}">
+                                    <h:commandLink class="btn btn-danger" value="Remove" action="#{userDetailBean.removeTweet(tweet.id)}">
+                                        <f:ajax event="action" render="tweets"/>
+                                    </h:commandLink>
+                                </h:column>
+
+                                <h:column>
+                                    <h:commandLink class="btn btn-danger" value="TEST" action="#{userDetailBean.testMethod()}">
                                         <f:ajax event="action" render="tweets"/>
                                     </h:commandLink>
                                 </h:column>
 
                             </h:dataTable>
+                            <h:messages globalOnly="false"/>
                         </h:form>
                     </h:panelGroup>
 

@@ -1,20 +1,26 @@
 package bean.users;
 
+import domain.Tweet;
 import domain.User;
+import service.TweetService;
 import service.UserService;
 
 import javax.enterprise.context.RequestScoped;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Named(value = "userDetailBean")
-@RequestScoped
-public class UserDetailBean {
+@ViewScoped
+public class UserDetailBean  implements Serializable {
 
     @Inject
     private UserService userService;
+    @Inject
+    private TweetService tweetService;
 
     private String username;
     private User user;
@@ -45,7 +51,11 @@ public class UserDetailBean {
         return "user?faces-redirect=true";
     }
 
-    public void removeTweet() {
-        userService.removeUser(user);
+    public void removeTweet(long tweetid) {
+        tweetService.removeTweet(tweetid);
+    }
+
+    public void testMethod() {
+        System.out.println("Works");
     }
 }

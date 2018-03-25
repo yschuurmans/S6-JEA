@@ -45,11 +45,14 @@ public class TweetDAOImplJPA implements TweetDAO {
 
     @Override
     public Tweet getTweet(long id) {
-        TypedQuery<Tweet> query = em.createNamedQuery("tweet.findByID", Tweet.class);
-        query.setParameter("id", id);
-        List<Tweet> result = query.getResultList();
-        if (result.size() <= 0) return null;
-        return result.get(0);
+        Tweet tweet = em.find(Tweet.class, id);
+        return tweet;
+
+//        TypedQuery<Tweet> query = em.createNamedQuery("tweet.findByID", Tweet.class);
+//        query.setParameter("id", id);
+//        List<Tweet> result = query.getResultList();
+//        if (result.size() <= 0) return null;
+//        return result.get(0);
     }
 
     @Override
