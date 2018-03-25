@@ -11,6 +11,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import static javax.persistence.CascadeType.ALL;
+import static javax.persistence.CascadeType.DETACH;
+import static javax.persistence.CascadeType.PERSIST;
+
 @Entity
 @NamedQueries({
         @NamedQuery(name = "user.findByname", query = "SELECT s FROM User s WHERE s.username = :name"),
@@ -33,15 +37,15 @@ public class User {
             inverseJoinColumns
                     = @JoinColumn(name = "GroupName", referencedColumnName = "groupName")
     )
-    @ManyToMany(cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = {ALL}, fetch = FetchType.EAGER)
     private Collection<PermissionGroup> permissionGroups = new ArrayList<>();
 
     @JsonbTransient
-    @ManyToMany(mappedBy = "likedBy", cascade = CascadeType.PERSIST)
+    @ManyToMany(mappedBy = "likedBy", cascade = PERSIST)
     private List<Tweet> likes;
 
     @JsonbTransient
-    @OneToMany(mappedBy = "poster", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "poster", cascade = PERSIST)
     private List<Tweet> tweets;
 
     @JsonbTransient
@@ -49,7 +53,7 @@ public class User {
     private List<User> followers;
 
     @JsonbTransient
-    @ManyToMany(mappedBy = "followers", cascade = CascadeType.PERSIST)
+    @ManyToMany(mappedBy = "followers", cascade = PERSIST)
     private List<User> following;
 
     public User(String username, String bio, String password) {
@@ -57,12 +61,10 @@ public class User {
         tweets = new ArrayList<>();
         followers = new ArrayList<>();
         following = new ArrayList<>();
-        permissionGroups = new ArrayList<>();
 
         this.username = username;
         this.bio = bio;
         this.password = password;
-        setPermissionGroup(Role.User);
     }
 
     public User() {
@@ -70,8 +72,6 @@ public class User {
         tweets = new ArrayList<>();
         followers = new ArrayList<>();
         following = new ArrayList<>();
-        permissionGroups = new ArrayList<>();
-        setPermissionGroup(Role.User);
 
     }
 
