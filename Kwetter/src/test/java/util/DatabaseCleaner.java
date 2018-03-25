@@ -1,6 +1,7 @@
 package util;
 
 import domain.Hashtag;
+import domain.PermissionGroup;
 import domain.Tweet;
 import domain.User;
 
@@ -14,7 +15,9 @@ public class DatabaseCleaner {
             Tweet.class,
             Hashtag.class,
             User.class,
+            PermissionGroup.class,
     };
+
     private final EntityManager em;
 
     public DatabaseCleaner(EntityManager entityManager) {
@@ -25,14 +28,14 @@ public class DatabaseCleaner {
         em.getTransaction().begin();
 
         for (Class<?> entityType : ENTITY_TYPES) {
-            deleteEntities(entityType);
+            deleteEntities(getEntityName(entityType));
         }
         em.getTransaction().commit();
         em.close();
     }
 
-    private void deleteEntities(Class<?> entityType) {
-        em.createQuery("delete from " + getEntityName(entityType)).executeUpdate();
+    private void deleteEntities(String entityName) {
+        em.createQuery("delete from " + entityName).executeUpdate();
     }
 
     protected String getEntityName(Class<?> clazz) {
