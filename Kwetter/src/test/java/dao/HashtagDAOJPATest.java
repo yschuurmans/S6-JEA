@@ -1,6 +1,7 @@
 package dao;
 
 import domain.Hashtag;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 import util.DatabaseCleaner;
@@ -36,6 +37,11 @@ public class HashtagDAOJPATest {
 
         hashtagDAO = new HashtagDAOImplJPA();
         hashtagDAO.setEm(em);
+    }
+
+    @AfterClass
+    public void breakDown() {
+        setUp();
     }
 
     @Test

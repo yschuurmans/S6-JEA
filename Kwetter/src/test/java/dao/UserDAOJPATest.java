@@ -1,6 +1,7 @@
 package dao;
 
 import domain.User;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 import util.DatabaseCleaner;
@@ -34,6 +35,11 @@ public class UserDAOJPATest {
 
         userDAO = new UserDAOImplJPA();
         userDAO.setEm(em);
+    }
+
+    @AfterClass
+    public void breakDown() {
+        setUp();
     }
 
     @Test

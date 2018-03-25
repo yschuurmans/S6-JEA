@@ -2,6 +2,7 @@ package dao;
 
 import domain.Tweet;
 import domain.User;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 import util.DatabaseCleaner;
@@ -37,6 +38,11 @@ public class TweetDAOJPATest {
         userDAO = new UserDAOImplJPA();
         tweetDAO.setEm(em);
         userDAO.setEm(em);
+    }
+
+    @AfterClass
+    public void breakDown() {
+        setUp();
     }
 
     @Test
