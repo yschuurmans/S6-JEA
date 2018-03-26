@@ -186,7 +186,8 @@ public class User {
     }
 
     public Role getPermissionGroup() {
-        if(permissionGroups == null) return null;
+        if(permissionGroups == null) permissionGroups = new ArrayList<>();
+        if(permissionGroups.toArray().length <= 0) return Role.None;
         switch(((PermissionGroup)permissionGroups.toArray()[0]).getGroupName()) {
             case PermissionGroup.ADMIN_GROUP_NAME:
                 return Role.Admin;
@@ -195,11 +196,12 @@ public class User {
             case PermissionGroup.USER_GROUP_NAME:
                 return Role.User;
             default :
-                return null;
+                return Role.None;
         }
     }
 
     public void setPermissionGroup(Role newRole) {
+        if(permissionGroups == null) permissionGroups = new ArrayList<>();
         permissionGroups.clear();
         switch(newRole) {
             case Admin:

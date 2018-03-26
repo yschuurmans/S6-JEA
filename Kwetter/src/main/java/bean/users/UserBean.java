@@ -7,10 +7,12 @@ import service.UserService;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.faces.model.SelectItem;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -90,6 +92,16 @@ public class UserBean implements Serializable {
     public void addUser() {
         User user = new User(username, bio, password);
         userService.addUser(user);
+        username = "";
+        bio = "";
+        password = "";
+        salt = "";
+
+        try {
+            FacesContext.getCurrentInstance().getExternalContext().redirect("index.xhtml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void editUser(User user) {

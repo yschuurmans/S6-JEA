@@ -22,6 +22,9 @@
     <div class="row">
         <div class="col-md-8 col-sm-12">
             <div class="panel panel-default">
+                <h:form>
+                    <h:commandButton class="btn btn-danger" value="logout" action="#{loginBean.logout}"/>
+                </h:form>
                 <div class="panel-heading">Users</div>
                 <div class="panel-body">
 
@@ -56,13 +59,8 @@
                                     <h:outputLabel value="#{tweet.tweetContent}"/>
                                 </h:column>
                                 <h:column>
-                                    <h:commandLink class="btn btn-danger" value="Remove" action="#{userDetailBean.removeTweet(tweet.id)}">
-                                        <f:ajax event="action" render="tweets"/>
-                                    </h:commandLink>
-                                </h:column>
-
-                                <h:column>
-                                    <h:commandLink class="btn btn-danger" value="TEST" action="#{userDetailBean.testMethod()}">
+                                    <h:commandLink class="btn btn-danger" value="Remove"
+                                                   action="#{userDetailBean.removeTweet(tweet.id)}">
                                         <f:ajax event="action" render="tweets"/>
                                     </h:commandLink>
                                 </h:column>

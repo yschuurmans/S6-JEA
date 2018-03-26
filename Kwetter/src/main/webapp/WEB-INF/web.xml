@@ -34,6 +34,18 @@
             <role-name>AdminRole</role-name>
         </auth-constraint>
     </security-constraint>
+    <security-constraint>
+        <display-name>Admin</display-name>
+        <web-resource-collection>
+            <web-resource-name>userdetail</web-resource-name>
+            <description>userdetail</description>
+            <url-pattern>/userdetail.xhtml</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description/>
+            <role-name>AdminRole</role-name>
+        </auth-constraint>
+    </security-constraint>
 
     <login-config>
         <auth-method>FORM</auth-method>
