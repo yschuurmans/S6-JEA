@@ -1,0 +1,18 @@
+<br/>
+<div class="row">
+  <div class="col-md-8 offset-md-2">
+    <div class="card">
+      <div class="card-header"><h3>All Users</h3></div>
+      <div class="card-body">
+
+        <ul class="media-list" *ngFor="let user of users">
+          <li class="media">
+            {{user.username}} <br/>
+            {{user.id}} : {{user.bio}}
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
