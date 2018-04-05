@@ -45,8 +45,8 @@ public class TweetService {
         for (User following : currentUser.getFollowing()) {
             timelineTweets
                     .addAll(following.getTweets()
-                    .subList(following.getTweets().size()-amountTweets,
-                            following.getTweets().size()));
+                    .subList(following.getTweets().size()-Math.min(amountTweets, following.getTweets().size()),
+                            following.getTweets().size()-1  ));
         }
         return timelineTweets.subList(timelineTweets.size() - amountTweets, timelineTweets.size());
     }

@@ -47,15 +47,20 @@ public class Startup {
         userService.addFollower("Ken", "Youri");
         userService.addFollower("Mike", "Youri");
         userService.addFollower("Youri", "Ken");
-        userService.addFollower("Youri", "Mike");
 
         tweetService.addTweet(new Tweet(Youri, "RandomTweet"));
         tweetService.addTweet(new Tweet(Youri, "RandomTweet2"));
         tweetService.addTweet(new Tweet(Youri, "Testdata is interessant"));
         tweetService.addTweet(new Tweet(Youri, "Waarom lees je dit überhaupt?"));
-
         tweetService.addTweet(new Tweet(Youri, "#Twitter =/= #kwetter"));
         tweetService.addTweet(new Tweet(Youri, "werken aan de #kwetter app"));
+
+        tweetService.addTweet(new Tweet(Ken, "Random bericht wat ken zou sturen"));
+        tweetService.addTweet(new Tweet(Ken, "Nog een random bericht wat ken zou sturen"));
+        tweetService.addTweet(new Tweet(Ken, "FUCK HOEVEEL BERICHTEN GAAT KEN STUREN"));
+        tweetService.addTweet(new Tweet(Mike, "Waarom lees je dit überhaupt?"));
+        tweetService.addTweet(new Tweet(Mike, "#Twitter =/= #kwetter"));
+        tweetService.addTweet(new Tweet(Mike, "werken aan de #kwetter app"));
 
 
 

@@ -42,6 +42,14 @@ public class UserResource {
         return Response.ok(allUsers).build();
     }
 
+    @GET
+    @Path("{username}/timeline")
+    public Response getTimeline(@PathParam("username") String username) {
+        List<JsonObject> allTweets = new ArrayList<>();
+        ts.getTimelineTweets(username,50).forEach(tweet -> allTweets.add(tweet.toJson(httpRequest)));
+        return Response.ok(allTweets).build();
+    }
+
 
     @GET
     @Path("{username}")

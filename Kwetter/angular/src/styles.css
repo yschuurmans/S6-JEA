@@ -1,0 +1,29 @@
+.media-list{
+  padding:0px;
+}
+.img-circle {
+  border-radius: 50%;
+  max-width: 50px;
+  max-height: 50px;
+  border: 2px solid #cbcbcb;
+}
+.media-left {
+  padding-right: 10px;
+}
+.media {
+  border-bottom: 1px solid #ddd;
+  padding: 5px 30px 5px 5px;
+}
+.media-list{
+  padding:0px;
+}
+
+.media-header {
+  font-weight: bold;
+}
+
+.media-content {
+  font-size: 0.8em;
+}
+
+

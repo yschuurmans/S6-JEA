@@ -1,7 +1,12 @@
 package domain;
 
+import Logic.HttpLogic;
+
+import javax.json.Json;
+import javax.json.JsonObject;
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.constraints.Max;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
@@ -47,6 +52,13 @@ public class Tweet {
     @ManyToMany(mappedBy = "tweetsUsingHashtag", cascade = CascadeType.PERSIST)
     private List<Hashtag> hashTagsUsed;
 
+
+    public JsonObject toJson(HttpServletRequest request) {
+        return Json.createObjectBuilder().
+                add("id", this.id).
+                add("poster", this.poster.toJson(request)).
+                build();
+    }
 
     public long getId() {
         return id;

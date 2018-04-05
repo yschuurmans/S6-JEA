@@ -8,17 +8,21 @@ import { UsersComponent } from './users/users.component';
 import {UserService} from "./service/user.service";
 import {TweetService} from "./service/tweet.service";
 import {HttpClientModule} from "@angular/common/http";
+import { TimelineComponent } from './timeline/timeline.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TweetsComponent,
-    UsersComponent
+    UsersComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [UserService, TweetService],
   bootstrap: [AppComponent]
