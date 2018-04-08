@@ -51,6 +51,7 @@ public class Startup {
         tweetService.addTweet(new Tweet(Youri, "RandomTweet"));
         tweetService.addTweet(new Tweet(Youri, "RandomTweet2"));
         tweetService.addTweet(new Tweet(Youri, "Testdata is interessant"));
+        tweetService.addTweet(new Tweet(Ken, "Random bericht wat ken zou sturen"));
         tweetService.addTweet(new Tweet(Youri, "Waarom lees je dit überhaupt?"));
         tweetService.addTweet(new Tweet(Youri, "#Twitter =/= #kwetter"));
         tweetService.addTweet(new Tweet(Youri, "werken aan de #kwetter app"));

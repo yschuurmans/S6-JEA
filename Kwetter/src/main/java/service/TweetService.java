@@ -50,6 +50,7 @@ public class TweetService {
                     .subList(following.getTweets().size()-Math.min(amountTweets, following.getTweets().size()),
                             following.getTweets().size()));
         }
+        timelineTweets.addAll(currentUser.getTweets());
         return timelineTweets
                 .subList(timelineTweets.size()-Math.min(amountTweets, timelineTweets.size()),
                         timelineTweets.size());

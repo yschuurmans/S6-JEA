@@ -16,6 +16,8 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.xml.ws.http.HTTPBinding;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @Path("users")
@@ -45,9 +47,12 @@ public class UserResource {
     @GET
     @Path("{username}/timeline")
     public Response getTimeline(@PathParam("username") String username) {
-        List<JsonObject> allTweets = new ArrayList<>();
-        ts.getTimelineTweets(username,50).forEach(tweet -> allTweets.add(tweet.toJson(httpRequest)));
-        return Response.ok(allTweets).build();
+        List<JsonObject> allTweetsJson = new ArrayList<>();
+        List<Tweet> allTweets = new ArrayList<>();
+        allTweets = ts.getTimelineTweets(username,50);
+        Collections.sort(allTweets);
+        allTweets.forEach(tweet -> allTweetsJson.add(tweet.toJson(httpRequest)));
+        return Response.ok(allTweetsJson).build();
     }
 
 

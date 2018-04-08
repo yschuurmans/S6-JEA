@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.constraints.Max;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -20,11 +21,12 @@ import java.util.List;
         @NamedQuery(name = "tweet.findByPoster", query = "SELECT t FROM Tweet t WHERE t.poster = :poster")
 
 })
-public class Tweet {
+public class Tweet  implements Comparable<Tweet>{
     public Tweet() {
         mentions = new ArrayList<>();
         likedBy = new ArrayList<>();
         hashTagsUsed = new ArrayList<>();
+        dateTime = new Date();
     }
 
     public Tweet(User poster, String content) {
@@ -34,6 +36,7 @@ public class Tweet {
         mentions = new ArrayList<>();
         likedBy = new ArrayList<>();
         hashTagsUsed = new ArrayList<>();
+        dateTime = new Date();
     }
 
     @Id
@@ -51,6 +54,8 @@ public class Tweet {
     @JsonbTransient
     @ManyToMany(mappedBy = "tweetsUsingHashtag", cascade = CascadeType.PERSIST)
     private List<Hashtag> hashTagsUsed;
+
+    private Date dateTime;
 
 
     public JsonObject toJson(HttpServletRequest request) {
@@ -107,5 +112,20 @@ public class Tweet {
 
     public void setHashTagsUsed(List<Hashtag> hashTagsUsed) {
         this.hashTagsUsed = hashTagsUsed;
+    }
+
+
+    public Date getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(Date dateTime) {
+        this.dateTime = dateTime;
+    }
+
+
+    @Override
+    public int compareTo(Tweet o) {
+        return getDateTime().compareTo(o.getDateTime());
     }
 }
