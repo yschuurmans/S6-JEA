@@ -14,10 +14,10 @@ export class TimelineComponent implements OnInit {
   constructor(private tweetService: TweetService) { }
 
   ngOnInit() {
-    this.getAllTweets("Youri");//this.username);
+    this.getTimelineTweets("Youri");//this.username);
   }
 
-  getAllTweets(userID : String) : void {
+  getTimelineTweets(userID : String) : void {
       this.tweetService.getTimelineTweets(userID).subscribe(
         tweets => this.tweets = tweets
       );

@@ -57,6 +57,7 @@ public class Tweet {
         return Json.createObjectBuilder().
                 add("id", this.id).
                 add("poster", this.poster.toJson(request)).
+                add("tweetContent", this.tweetContent).
                 build();
     }
 

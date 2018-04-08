@@ -43,12 +43,16 @@ public class TweetService {
         User currentUser = userService.findByName(username);
         List<Tweet> timelineTweets = new ArrayList<>();
         for (User following : currentUser.getFollowing()) {
+            int fromIndex = following.getTweets().size()-Math.min(amountTweets, following.getTweets().size());
+            int toIndex = following.getTweets().size() ;
             timelineTweets
                     .addAll(following.getTweets()
                     .subList(following.getTweets().size()-Math.min(amountTweets, following.getTweets().size()),
-                            following.getTweets().size()-1  ));
+                            following.getTweets().size()));
         }
-        return timelineTweets.subList(timelineTweets.size() - amountTweets, timelineTweets.size());
+        return timelineTweets
+                .subList(timelineTweets.size()-Math.min(amountTweets, timelineTweets.size()),
+                        timelineTweets.size());
     }
 
 
