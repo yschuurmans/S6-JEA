@@ -23,4 +23,10 @@ public class TweetResource {
         return Response.ok(ts.getAllTweets()).build();
     }
 
+    @GET
+    @Path("search")
+    public Response searchTweets(@QueryParam("searchString") String searchString) {
+        return Response.ok(ts.searchTweets(searchString)).build();
+    }
+
 }

@@ -10,13 +10,20 @@ export class TweetService {
   constructor(private http: HttpClient) {
   }
 
-  /** GET hero by id. Will 404 if id not found */
+  postTweet(username: String, tweet: Tweet): Observable<Tweet[]> {
+    return this.http.put<Tweet[]>('http://localhost:8080/Kwetter/api/users/' + username + '/tweets', tweet);
+  }
+
   getAllTweets(): Observable<Tweet[]> {
     return this.http.get<Tweet[]>(this.tweetsUrl)
   }
 
-  /** GET hero by id. Will 404 if id not found */
   getTimelineTweets(username: String): Observable<Tweet[]> {
     return this.http.get<Tweet[]>('http://localhost:8080/Kwetter/api/users/' + username + '/timeline');
+  }
+
+  searchTweets(searchString: String): Observable<Tweet[]> {
+    console.log("searching for: "+ searchString)
+    return this.http.get<Tweet[]>('http://localhost:8080/Kwetter/api/tweets/search?searchString=' + searchString);
   }
 }

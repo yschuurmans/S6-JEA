@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-header"><h3>Followers/Following</h3></div>
+  <div class="card-body">
+    <button (click)="this.getFollowers()" class="btn-primary">Followers</button>
+    <button (click)="this.getFollowing()" class="btn-primary">Following</button>
+    <br/><br/>
+    <div class="card">
+      <div class="card-body">
+        <app-users [users]="users"></app-users>
+      </div>
+    </div>
+  </div>
+</div>

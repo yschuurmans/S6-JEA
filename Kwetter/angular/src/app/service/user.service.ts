@@ -13,4 +13,12 @@ export class UserService {
   getAllUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.usersUrl);
   }
+
+  getFollowers(username: String) {
+    return this.http.get<User[]>(this.usersUrl + '/'+username+'/followers');
+  }
+
+  getFollowing(username: String) {
+    return this.http.get<User[]>(this.usersUrl + '/'+username+'/following');
+  }
 }

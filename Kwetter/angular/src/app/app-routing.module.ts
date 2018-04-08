@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
-import {UsersComponent} from "./users/users.component";
-import {TimelineComponent} from "./timeline/timeline.component";
+import {UsersComponent} from "./submodules/users/users.component";
+import {TimelineComponent} from "./modules/timeline/timeline.component";
+import {DashboardComponent} from "./dashboard/dashboard.component";
 
 
 
 const routes: Routes = [
   {path: 'users', component: UsersComponent},
-  { path: '', component: TimelineComponent},
+  { path: '', component: DashboardComponent},
 ];
 
 @NgModule({

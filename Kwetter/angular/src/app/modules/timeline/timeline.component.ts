@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {TweetService} from "../service/tweet.service";
-import {Tweet} from "../domain/tweet";
+import {TweetService} from "../../service/tweet.service";
+import {Tweet} from "../../domain/tweet";
 
 @Component({
   selector: 'app-timeline',
@@ -14,12 +14,17 @@ export class TimelineComponent implements OnInit {
   constructor(private tweetService: TweetService) { }
 
   ngOnInit() {
-    this.getTimelineTweets("Youri");//this.username);
+    this.refreshTweets();
   }
 
   getTimelineTweets(userID : String) : void {
       this.tweetService.getTimelineTweets(userID).subscribe(
         tweets => this.tweets = tweets
       );
+  }
+
+  refreshTweets() {
+    console.log("refreshing tweets");
+    this.getTimelineTweets(this.username);
   }
 }

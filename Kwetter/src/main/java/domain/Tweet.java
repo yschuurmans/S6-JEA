@@ -126,6 +126,6 @@ public class Tweet  implements Comparable<Tweet>{
 
     @Override
     public int compareTo(Tweet o) {
-        return getDateTime().compareTo(o.getDateTime());
+        return o.getDateTime().compareTo(getDateTime());
     }
 }
