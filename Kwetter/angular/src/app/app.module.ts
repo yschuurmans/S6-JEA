@@ -10,11 +10,13 @@ import {TweetService} from "./service/tweet.service";
 import {HttpClientModule} from "@angular/common/http";
 import { TimelineComponent } from './modules/timeline/timeline.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './Views/dashboard/dashboard.component';
 import { SearchComponent } from './modules/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { FollowersComponent } from './modules/followers/followers.component';
 import { PostTweetComponent } from './modules/post-tweet/post-tweet.component';
+import { TweetComponent } from './Views/tweet/tweet.component';
+import { UserComponent } from './Views/user/user.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { PostTweetComponent } from './modules/post-tweet/post-tweet.component';
     DashboardComponent,
     SearchComponent,
     FollowersComponent,
-    PostTweetComponent
+    PostTweetComponent,
+    TweetComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

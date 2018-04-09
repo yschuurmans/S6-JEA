@@ -23,7 +23,10 @@ export class TweetService {
   }
 
   searchTweets(searchString: String): Observable<Tweet[]> {
-    console.log("searching for: "+ searchString)
     return this.http.get<Tweet[]>('http://localhost:8080/Kwetter/api/tweets/search?searchString=' + searchString);
+  }
+
+  getTweet(tweetID: Number) {
+    return this.http.get<Tweet>('http://localhost:8080/Kwetter/api/tweets/' + tweetID);
   }
 }

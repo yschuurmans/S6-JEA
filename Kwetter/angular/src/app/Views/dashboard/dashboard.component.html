@@ -1,0 +1,22 @@
+
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <app-search></app-search>
+
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <app-post-tweet (tweetPosted)="tweetPosted()" username="Youri"></app-post-tweet>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <app-timeline username="Youri"></app-timeline>
+      </div>
+      <div class="col-md-6">
+        <app-followers username="Youri"></app-followers>
+      </div>
+    </div>
+  </div>
+</div>

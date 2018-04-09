@@ -7,6 +7,13 @@
   max-height: 50px;
   border: 2px solid #cbcbcb;
 }
+
+.lg-img-circle {
+  border-radius: 50%;
+  max-width: 200px;
+  max-height: 200px;
+  border: 2px solid #cbcbcb;
+}
 .media-left {
   padding-right: 10px;
 }

@@ -21,4 +21,8 @@ export class UserService {
   getFollowing(username: String) {
     return this.http.get<User[]>(this.usersUrl + '/'+username+'/following');
   }
+
+  getUser(username: String) {
+    return this.http.get<User>(this.usersUrl + '/'+username);
+  }
 }

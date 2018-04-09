@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-lg-5 offset-lg-1">
+    <div class="card">
+      <div class="card-header">{{user.username}}</div>
+      <div *ngIf="user" class="card-body media">
+        <a href="#" class="media-left">
+          <img src="https://sanelythinking.files.wordpress.com/2012/01/img_2433.png" alt="" class="lg-img-circle">
+        </a>
+        <div class="media-body">
+          <div class="media-header">{{user.username}}</div>
+          <div class="media-content">{{user.bio}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-5">
+    <app-followers username={{user.username}}></app-followers>
+  </div>
+</div>

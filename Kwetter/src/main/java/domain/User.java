@@ -27,6 +27,7 @@ public class User {
     private long id;
     @Column(unique = true)
     private String username;
+    @JsonbTransient
     private String password;
     private String salt;
     private String bio;

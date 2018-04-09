@@ -29,4 +29,10 @@ public class TweetResource {
         return Response.ok(ts.searchTweets(searchString)).build();
     }
 
+    @GET
+    @Path("{id}")
+    public Response getTweet(@PathParam("id") long id) {
+        return Response.ok(ts.getTweet(id)).build();
+    }
+
 }

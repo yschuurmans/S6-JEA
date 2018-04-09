@@ -1,0 +1,14 @@
+<div class="col-xl-6 offset-xl-3 col-md-8 offset-md-2">
+  <div class="card">
+    <div class="card-header">Tweet</div>
+    <div *ngIf="tweet" class="card-body media">
+      <a href="#" class="media-left">
+        <img src="https://sanelythinking.files.wordpress.com/2012/01/img_2433.png" alt="" class="img-circle">
+      </a>
+      <div class="media-body">
+        <div class="media-header">{{tweet.poster.username}}</div>
+        <div class="media-content">{{tweet.tweetContent}}</div>
+      </div>
+    </div>
+  </div>
+</div>

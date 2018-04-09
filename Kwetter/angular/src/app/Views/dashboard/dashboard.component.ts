@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {TimelineComponent} from "../modules/timeline/timeline.component";
+import {TimelineComponent} from "../../modules/timeline/timeline.component";
 
 @Component({
   selector: 'app-dashboard',
