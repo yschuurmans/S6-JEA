@@ -17,6 +17,8 @@ import { FollowersComponent } from './modules/followers/followers.component';
 import { PostTweetComponent } from './modules/post-tweet/post-tweet.component';
 import { TweetComponent } from './Views/tweet/tweet.component';
 import { UserComponent } from './Views/user/user.component';
+import { LoginComponent } from './submodules/login/login.component'
+import { CookieService } from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -30,15 +32,16 @@ import { UserComponent } from './Views/user/user.component';
     FollowersComponent,
     PostTweetComponent,
     TweetComponent,
-    UserComponent
+    UserComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [UserService, TweetService],
+  providers: [UserService, TweetService, CookieService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

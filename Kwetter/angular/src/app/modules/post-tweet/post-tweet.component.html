@@ -1,3 +1,9 @@
-<form (submit)="postTweet()">
-  <input name="tweetContent" type="text" id="postTweet" [(ngModel)]="this.tweet.tweetContent"/>
-</form>
+<div class="card">
+  <div class="card-header"><h3>Whats happening</h3></div>
+  <div class="card-body">
+
+    <form (submit)="postTweet()">
+      <input name="tweetContent" type="text" id="postTweet" class="col-12" [(ngModel)]="this.tweet.tweetContent"/>
+    </form>
+  </div>
+</div>

@@ -20,12 +20,15 @@ export class PostTweetComponent implements OnInit {
   }
 
   postTweet() {
-    console.log("Post tweet");
-    console.log("Tweet Content:" + this.tweet.tweetContent);
 
     this.tweetService.postTweet(this.username, this.tweet).subscribe(
-       x=> this.tweetPosted.next()
+       x=> this.tweetSuccesfullyPosted()
     );
 
+  }
+
+  tweetSuccesfullyPosted(){
+    this.tweetPosted.next();
+    this.tweet.tweetContent = "";
   }
 }

@@ -33,4 +33,6 @@
   font-size: 0.8em;
 }
 
+span.avoidWrap { display:inline-block; }
+
 
