@@ -17,11 +17,9 @@ import { FollowersComponent } from './modules/followers/followers.component';
 import { PostTweetComponent } from './modules/post-tweet/post-tweet.component';
 import { TweetComponent } from './Views/tweet/tweet.component';
 import { UserComponent } from './Views/user/user.component';
-import { LoginComponent } from './Views/Login/login.component'
-import { CookieService } from 'ngx-cookie-service';
-import { JwtHelperService } from '@auth0/angular-jwt';
 import {TokenInterceptor} from "./auth/token.interceptor";
 import { AuthenticationComponent } from './Views/authentication/authentication.component';
+import {AuthService} from "./auth/auth.service";
 
 
 @NgModule({
@@ -36,7 +34,6 @@ import { AuthenticationComponent } from './Views/authentication/authentication.c
     PostTweetComponent,
     TweetComponent,
     UserComponent,
-    LoginComponent,
     AuthenticationComponent
   ],
   imports: [
@@ -45,7 +42,7 @@ import { AuthenticationComponent } from './Views/authentication/authentication.c
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [UserService, TweetService, CookieService, JwtHelperService,
+  providers: [UserService, TweetService, AuthService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,

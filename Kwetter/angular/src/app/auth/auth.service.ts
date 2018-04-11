@@ -4,10 +4,14 @@ import {Observable} from "rxjs/Observable";
 import {Tweet} from "../domain/tweet";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 
+
+const helper = new JwtHelperService();
+
 @Injectable()
 export class AuthService {
 
-  constructor(private jwtHelper : JwtHelperService, private http: HttpClient) {
+
+  constructor(private http: HttpClient) {
   }
 
   public getToken(): string {
@@ -19,7 +23,7 @@ export class AuthService {
     const token = this.getToken();
     // return a boolean reflecting
     // whether or not the token is expired
-    return !this.jwtHelper.isTokenExpired(token);
+    return !helper.isTokenExpired(token);
   }
 
   public setToken(token : string) {

@@ -82,8 +82,9 @@ public class UserDAOImplJPA implements UserDAO {
         TypedQuery<User> query = em.createNamedQuery("user.authenticate", User.class);
         query.setParameter("username", username);
         query.setParameter("password", PasswordHash.stringToHash(password));
-        User result = query.getSingleResult();
-        return result;
+        List<User> result = query.getResultList();
+        if (result.size() <= 0) return null;
+        return result.get(0);
     }
 
 

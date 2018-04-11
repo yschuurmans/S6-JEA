@@ -6,7 +6,6 @@ import {TimelineComponent} from "./modules/timeline/timeline.component";
 import {DashboardComponent} from "./Views/dashboard/dashboard.component";
 import {TweetComponent} from "./Views/tweet/tweet.component";
 import {UserComponent} from "./Views/user/user.component";
-import {LoginComponent} from "./Views/login/login.component";
 import {AuthenticationComponent} from "./Views/authentication/authentication.component";
 
 
