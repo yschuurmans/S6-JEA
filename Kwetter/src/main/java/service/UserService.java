@@ -131,4 +131,14 @@ public class UserService {
     public boolean editUser(User user) {
         return userDAO.editUser(user);
     }
+
+    /**
+     * Authenticates a User and returns it if it is valid
+     * @param username the username of the user
+     * @param password the password of the user
+     * @return
+     */
+    public User authenticateUser(String username, String password) {
+        return userDAO.authenticateUser(username,password);
+    }
 }

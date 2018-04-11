@@ -20,39 +20,49 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4746424">
+    <splitter split-orientation="horizontal" split-proportion="0.49089727">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="UserResource.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/UserResource.java">
+          <file leaf-file-name="Startup.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/service/Startup.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="302">
-                  <caret line="127" column="42" lean-forward="false" selection-start-line="127" selection-start-column="33" selection-end-line="127" selection-end-column="42" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/domain/User.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
-                  <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+                <state relative-caret-position="0">
+                  <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="25" />
                   <folding>
-                    <element signature="e#3875#3876#0" expanded="true" />
-                    <element signature="e#3914#3915#0" expanded="true" />
-                    <element signature="e#4225#4226#0" expanded="true" />
-                    <element signature="e#4254#4255#0" expanded="true" />
+                    <element signature="imports" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="tweets.component.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular/src/app/submodules/tweets/tweets.component.html">
+          <file leaf-file-name="faces-config.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="144">
-                  <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+                <state relative-caret-position="90">
+                  <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+                  <folding />
+                </state>
+              </provider>
+              <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
+                <state />
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PingResource.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/PingResource.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="522">
+                  <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="beans.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -61,9 +71,10 @@
           <file leaf-file-name="TweetResource.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/TweetResource.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+                <state relative-caret-position="324">
+                  <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
                   <folding>
+                    <element signature="imports" expanded="true" />
                     <element signature="e#778#779#0" expanded="true" />
                     <element signature="e#837#838#0" expanded="true" />
                   </folding>
@@ -71,67 +82,34 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="dashboard.component.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="dashboard.component.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/angular/src/app/Views/dashboard/dashboard.component.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="5" column="73" lean-forward="false" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="login.component.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular/src/app/submodules/login/login.component.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/angular/src/app/submodules/login/login.component.ts">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="288">
                   <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#50#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="post-tweet.component.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular/src/app/modules/post-tweet/post-tweet.component.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="162">
-                  <caret line="9" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TweetService.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/service/TweetService.java">
+          <file leaf-file-name="tweet.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular/src/app/Views/tweet/tweet.component.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
-                  <caret line="145" column="5" lean-forward="false" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#4445#4446#0" expanded="true" />
-                    <element signature="e#4489#4490#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="234">
+                  <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TweetDAOImplJPA.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/dao/TweetDAOImplJPA.java">
+          <file leaf-file-name="tweet.service.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular/src/app/service/tweet.service.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="414">
-                  <caret line="46" column="24" lean-forward="false" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-                  <folding />
+                <state relative-caret-position="216">
+                  <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -140,65 +118,81 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular/src/app/app.component.html">
+          <file leaf-file-name="auth.service.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular/src/app/auth/auth.service.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="timeline.component.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular/src/app/modules/timeline/timeline.component.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
-                  <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="26" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="user.component.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular/src/app/Views/user/user.component.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="followers.component.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular/src/app/modules/followers/followers.component.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="36">
-                  <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="post-tweet.component.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular/src/app/modules/post-tweet/post-tweet.component.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="342">
-                  <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+                <state relative-caret-position="366">
+                  <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
                   <folding>
-                    <element signature="e#0#77#0" expanded="true" />
+                    <element signature="e#0#41#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="dashboard.component.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/angular/src/app/Views/dashboard/dashboard.component.ts">
+          <file leaf-file-name="token.interceptor.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular/src/app/auth/token.interceptor.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="486">
+                  <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="app-routing.module.ts" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/angular/src/app/app-routing.module.ts">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="270">
-                  <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+                  <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
                   <folding>
-                    <element signature="e#0#59#0" expanded="true" />
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="authentication.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular/src/app/Views/authentication/authentication.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="324">
+                  <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+                  <folding>
+                    <element signature="e#0#50#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="authentication.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular/src/app/Views/authentication/authentication.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="angular_compiler_plugin.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular/node_modules/@ngtools/webpack/src/angular_compiler_plugin.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="184">
+                  <caret line="673" column="22" lean-forward="false" selection-start-line="673" selection-start-column="22" selection-end-line="673" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tweet.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/angular/src/app/Views/tweet/tweet.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#55#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -207,18 +201,8 @@
           <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/angular/src/app/app.module.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/angular/src/app/app.component.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="144">
-                  <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+                <state relative-caret-position="252">
+                  <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
                   <folding />
                 </state>
               </provider>
@@ -242,11 +226,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>password</find>
-      <find>Userrole</find>
-      <find>file</find>
-      <find>userRole</find>
-      <find>init</find>
       <find>setPermissionGroup</find>
       <find>userDeta</find>
       <find>loadUser</find>
@@ -272,13 +251,19 @@
       <find>globals</find>
       <find>@angular</find>
       <find>common</find>
+      <find>resourceInfo</find>
+      <find>token</find>
+      <find>location.</find>
+      <find>login</find>
+      <find>LoginComponent</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Github\S6-JEA\Kwetter\src\main</dir>
       <dir>E:\Github\S6-JEA\Kwetter</dir>
       <dir>E:\Github\S6-JEA\Kwetter\angular</dir>
-      <dir>E:\Github\S6-JEA\Kwetter\angular\src</dir>
       <dir>E:\Github\S6-JEA\Kwetter\node_modules\angular2-cookie\services</dir>
+      <dir>E:\Github\S6-JEA\Kwetter\angular\src\app</dir>
+      <dir>E:\Github\S6-JEA\Kwetter\angular\src</dir>
     </dirStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -289,26 +274,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/angular/src/app/tweet-service.service.ts" />
-        <option value="$PROJECT_DIR$/src/main/webapp/userdetail.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/java/bean/LoginBean.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Role.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
-        <option value="$PROJECT_DIR$/angular/src/app/service/tweet-service.service.ts" />
-        <option value="$PROJECT_DIR$/src/main/java/bean/users/UserBean.java" />
-        <option value="$PROJECT_DIR$/angular/src/app/domain/user.ts" />
-        <option value="$PROJECT_DIR$/angular/src/app/users/users.component.ts" />
-        <option value="$PROJECT_DIR$/src/main/java/Logic/CORSFilter.java" />
-        <option value="$PROJECT_DIR$/angular/src/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/angular/src/app/app.component.css" />
-        <option value="$PROJECT_DIR$/angular/src/app/domain/tweet.ts" />
-        <option value="$PROJECT_DIR$/angular/src/app/tweets/tweets.component.css" />
-        <option value="$PROJECT_DIR$/angular/src/app/users/users.component.css" />
         <option value="$PROJECT_DIR$/angular/src/app/users/users.component.html" />
         <option value="$PROJECT_DIR$/angular/src/app/tweets/tweets.component.html" />
         <option value="$PROJECT_DIR$/src/main/java/domain/Tweet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/boundary/rest/UserResource.java" />
         <option value="$PROJECT_DIR$/angular/src/app/tweets/tweets.component.ts" />
         <option value="$PROJECT_DIR$/src/main/java/service/Startup.java" />
         <option value="$PROJECT_DIR$/angular/src/app/timeline/timeline.component.html" />
@@ -318,10 +286,8 @@
         <option value="$PROJECT_DIR$/src/main/java/boundary/rest/TweetResource.java" />
         <option value="$PROJECT_DIR$/angular/src/app/service/tweet.service.ts" />
         <option value="$PROJECT_DIR$/angular/src/app/Views/tweet/tweet.component.ts" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/User.java" />
         <option value="$PROJECT_DIR$/angular/src/app/Views/user/user.component.ts" />
         <option value="$PROJECT_DIR$/angular/src/app/service/user.service.ts" />
-        <option value="$PROJECT_DIR$/angular/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/angular/src/app/Views/tweet/tweet.component.html" />
         <option value="$PROJECT_DIR$/angular/src/app/modules/search/search.component.html" />
         <option value="$PROJECT_DIR$/angular/src/app/modules/post-tweet/post-tweet.component.html" />
@@ -337,9 +303,28 @@
         <option value="$PROJECT_DIR$/angular/src/app/submodules/login/login.component.html" />
         <option value="$PROJECT_DIR$/angular/src/app/globals.ts" />
         <option value="$PROJECT_DIR$/angular/src/app/Views/dashboard/dashboard.component.html" />
-        <option value="$PROJECT_DIR$/angular/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/angular/src/app/submodules/login/login.component.ts" />
         <option value="$PROJECT_DIR$/angular/src/app/Views/dashboard/dashboard.component.ts" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/UserDAOImplJPA.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/UserDAOImplLocal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Logic/KeyGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Annotations/TokenRequired.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/Role.java" />
+        <option value="$PROJECT_DIR$/src/main/java/boundary/rest/UserResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Logic/TokenRequiredFilter.java" />
+        <option value="$PROJECT_DIR$/angular/src/app/service/auth.service.ts" />
+        <option value="$PROJECT_DIR$/src/main/java/boundary/rest/LoginResource.java" />
+        <option value="$PROJECT_DIR$/angular/src/app/auth/auth.service.ts" />
+        <option value="$PROJECT_DIR$/angular/src/app/auth/token.interceptor.ts" />
+        <option value="$PROJECT_DIR$/angular/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/angular/src/app/Views/login/login.component.ts" />
+        <option value="$PROJECT_DIR$/angular/src/app/Views/login/login.component.html" />
+        <option value="$PROJECT_DIR$/angular/src/app/Views/authentication/authentication.component.html" />
+        <option value="$PROJECT_DIR$/angular/src/app/Views/authentication/authentication.component.ts" />
+        <option value="$PROJECT_DIR$/angular/src/app/app-routing.module.ts" />
       </list>
     </option>
   </component>
@@ -473,6 +458,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -504,58 +490,6 @@
               <item name="angular" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="followers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="post-tweet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="timeline" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="submodules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="submodules" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -565,42 +499,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Views" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Views" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
@@ -619,6 +518,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Annotations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
@@ -627,24 +534,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-              <item name="tweets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
@@ -691,21 +580,14 @@
               <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kwetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kwetter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -717,8 +599,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -745,12 +625,12 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Github\S6-JEA\Kwetter\src\main\webapp" />
-      <recent name="E:\Github\S6-JEA\Kwetter\src\main\java\bean\tweets" />
-      <recent name="E:\Github\S6-JEA\Kwetter\src\main\java" />
-      <recent name="E:\Github\S6-JEA\Kwetter\src\main\webapp\WEB-INF" />
-      <recent name="E:\Github\S6-JEA\Kwetter\src\main\java\dao" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Github\S6-JEA\Kwetter\angular\src\app\auth" />
+      <recent name="E:\Github\S6-JEA\Kwetter\angular\src\app\Views" />
+      <recent name="E:\Github\S6-JEA\Kwetter\angular\src\app" />
+      <recent name="E:\Github\S6-JEA\Kwetter\angular\src" />
+      <recent name="E:\Github\S6-JEA\Kwetter\angular\src\assets" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="dao" />
@@ -758,12 +638,12 @@
       <recent name="boundary.rest" />
       <recent name="service" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Github\S6-JEA\Kwetter\angular\src\app\Views" />
-      <recent name="E:\Github\S6-JEA\Kwetter\angular\src\app" />
-      <recent name="E:\Github\S6-JEA\Kwetter\angular\src" />
-      <recent name="E:\Github\S6-JEA\Kwetter\angular\src\assets" />
-      <recent name="E:\Github\S6-JEA\Kwetter\angular\src\app\services" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Github\S6-JEA\Kwetter\src\main\webapp" />
+      <recent name="E:\Github\S6-JEA\Kwetter\src\main\java\bean\tweets" />
+      <recent name="E:\Github\S6-JEA\Kwetter\src\main\java" />
+      <recent name="E:\Github\S6-JEA\Kwetter\src\main\webapp\WEB-INF" />
+      <recent name="E:\Github\S6-JEA\Kwetter\src\main\java\dao" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1124,7 +1004,8 @@
       <workItem from="1522224473042" duration="7523000" />
       <workItem from="1522829125183" duration="10038000" />
       <workItem from="1522925854430" duration="5611000" />
-      <workItem from="1523258035288" duration="16012000" />
+      <workItem from="1523258035288" duration="18697000" />
+      <workItem from="1523430932586" duration="16692000" />
     </task>
     <servers />
   </component>
@@ -1161,11 +1042,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186702000" />
+    <option name="totallyTimeSpent" value="206079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35331905" sideWeight="0.36770833" order="13" side_tool="true" content_ui="tabs" />
@@ -1176,22 +1056,22 @@
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38706258" sideWeight="0.60572916" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20254506" sideWeight="0.60572916" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32661718" sideWeight="0.48625" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17921527" sideWeight="0.48625" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1399788" sideWeight="0.6322917" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38918346" sideWeight="0.6322917" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44539616" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19895834" sideWeight="0.27147403" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19895834" sideWeight="0.728526" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19895834" sideWeight="0.2829861" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19895834" sideWeight="0.7170139" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32208923" sideWeight="0.38222697" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31707317" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
@@ -1228,7 +1108,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/dao/UserDAOImplLocal.java</url>
-          <line>61</line>
+          <line>62</line>
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
@@ -1240,7 +1120,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/domain/User.java</url>
-          <line>101</line>
+          <line>102</line>
           <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
@@ -1277,12 +1157,13 @@
           <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="80" />
+      <option name="time" value="90" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="GlassfishConfiguration">
         <watch expression="this" />
         <watch expression="this" language="JAVA" />
+        <watch expression="((NullPointerException)((NullPointerException)((NullPointerException)((NullPointerException)e).cause).cause).cause).cause" custom="java.lang.NullPointerException" />
       </configuration>
     </watches-manager>
   </component>
@@ -1303,433 +1184,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/angular/src/app/users/users.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/HashtagService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/tweets/tweets.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/tweets/tweets.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="10" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/timeline/timeline.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDAOImplJPA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-          <folding>
-            <element signature="e#1004#1005#0" expanded="false" />
-            <element signature="e#1055#1056#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/timeline/timeline.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/Startup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/eclipselink/2.5.2/eclipselink-2.5.2.jar!/org/eclipse/persistence/indirection/IndirectList.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7884">
-          <caret line="520" column="47" lean-forward="false" selection-start-line="520" selection-start-column="47" selection-end-line="520" selection-end-column="47" />
-          <folding>
-            <marker date="1519037062432" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1519037062432" expanded="false" signature="159:968" ph="..." />
-            <marker date="1519037062432" expanded="true" signature="1537:1600" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="1647:1723" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="1793:1885" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="1934:2027" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="2076:2181" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="2253:2317" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="2404:2859" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="2919:3228" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="3303:3370" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="3460:3907" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="3948:4768" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="4821:5190" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="5232:5567" ph="{...}" />
-            <marker date="1519037062432" expanded="false" signature="5607:5618" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="5632:5638" ph=" }" />
-            <marker date="1519037062432" expanded="true" signature="5677:6873" ph="{...}" />
-            <marker date="1519037062432" expanded="false" signature="6900:6911" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="6948:6954" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="6979:6990" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="7015:7021" ph=" }" />
-            <marker date="1519037062432" expanded="true" signature="7062:7141" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="7182:7471" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="7517:7800" ph="{...}" />
-            <marker date="1519037062432" expanded="false" signature="7846:7857" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="7898:7904" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="7961:7972" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="8009:8015" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="8055:8066" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="8109:8115" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="8150:8161" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="8198:8204" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="8253:8264" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="8311:8317" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="8354:8365" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="8401:8407" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="8441:8452" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="8493:8499" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="8533:8544" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="8581:8587" ph=" }" />
-            <marker date="1519037062432" expanded="true" signature="8624:8877" ph="{...}" />
-            <marker date="1519037062432" expanded="false" signature="8916:8927" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="8953:8959" ph=" }" />
-            <marker date="1519037062432" expanded="true" signature="9010:9328" ph="{...}" />
-            <marker date="1519037062432" expanded="false" signature="9368:9379" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="9446:9452" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="9479:9490" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="9527:9533" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="9570:9581" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="9621:9627" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="9675:9686" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="9733:9739" ph=" }" />
-            <marker date="1519037062432" expanded="true" signature="9796:9905" ph="{...}" />
-            <marker date="1519037062432" expanded="false" signature="9935:9946" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="9982:9988" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="10025:10036" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="10082:10088" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="10120:10131" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="10159:10165" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="10198:10209" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="10249:10255" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="10296:10307" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="10351:10357" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="10409:10420" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="10471:10477" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="10517:10528" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="10556:10562" ph=" }" />
-            <marker date="1519037062432" expanded="true" signature="10612:12426" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="10653:12419" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="10745:10852" ph="{...}" />
-            <marker date="1519037062432" expanded="false" signature="10890:10909" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="10948:10962" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="11004:11023" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="11066:11080" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="11120:11139" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="11184:11198" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="11234:11253" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="11294:11308" ph=" }" />
-            <marker date="1519037062432" expanded="true" signature="11343:11468" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="11507:11636" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="11671:11847" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="11892:12196" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="12241:12409" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="12464:12601" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="12645:13566" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="13611:14000" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="14038:14378" ph="{...}" />
-            <marker date="1519037062432" expanded="false" signature="14424:14435" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="14459:14465" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="14509:14520" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="14539:14545" ph=" }" />
-            <marker date="1519037062432" expanded="true" signature="14590:15122" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="15173:15436" ph="{...}" />
-            <marker date="1519037062432" expanded="false" signature="15489:15500" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="15521:15527" ph=" }" />
-            <marker date="1519037062432" expanded="true" signature="15566:15862" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="15934:15999" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="16066:16257" ph="{...}" />
-            <marker date="1519037062432" expanded="false" signature="16280:16291" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="16324:16330" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="16382:16393" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="16426:16432" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="16485:16496" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="16550:16556" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="16587:16598" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="16634:16640" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="16681:16692" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="16729:16735" ph=" }" />
-            <marker date="1519037062432" expanded="true" signature="16766:16929" ph="{...}" />
-            <marker date="1519037062432" expanded="false" signature="16959:16970" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="17002:17008" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="17084:17095" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="17122:17128" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="17183:17194" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="17229:17235" ph=" }" />
-            <marker date="1519037062432" expanded="true" signature="17331:17471" ph="{...}" />
-            <marker date="1519037062432" expanded="false" signature="17516:17527" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="17553:17559" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="17622:17633" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="17668:17674" ph=" }" />
-            <marker date="1519037062432" expanded="true" signature="17719:17870" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="17913:18058" ph="{...}" />
-            <marker date="1519037062432" expanded="false" signature="18097:18108" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="18175:18181" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="18222:18233" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="18304:18310" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="18351:18362" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="18422:18428" ph=" }" />
-            <marker date="1519037062432" expanded="true" signature="18479:18775" ph="{...}" />
-            <marker date="1519037062432" expanded="true" signature="18820:19069" ph="{...}" />
-            <marker date="1519037062432" expanded="false" signature="19113:19124" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="19158:19164" ph=" }" />
-            <marker date="1519037062432" expanded="false" signature="19224:19235" ph=" { " />
-            <marker date="1519037062432" expanded="false" signature="19273:19279" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/modules/search/search.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Tweet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/UserResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="127" column="42" lean-forward="false" selection-start-line="127" selection-start-column="33" selection-end-line="127" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/service/tweet.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="29" column="87" lean-forward="true" selection-start-line="29" selection-start-column="87" selection-end-line="29" selection-end-column="87" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-            <marker date="1523263614499" expanded="true" signature="1004:1010" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/TweetDAOImplJPA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="46" column="24" lean-forward="false" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/TweetService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="145" column="5" lean-forward="false" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
-          <folding>
-            <element signature="e#4445#4446#0" expanded="true" />
-            <element signature="e#4489#4490#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/Views/tweet/tweet.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="27" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#55#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/service/user.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/Views/user/user.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="19" column="64" lean-forward="false" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#55#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/app-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/Views/tweet/tweet.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#73#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/submodules/users/users.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#73#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/submodules/users/users.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/submodules/tweets/tweets.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/Views/tweet/tweet.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/modules/search/search.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-          <folding>
-            <element signature="e#3875#3876#0" expanded="true" />
-            <element signature="e#3914#3915#0" expanded="true" />
-            <element signature="e#4225#4226#0" expanded="true" />
-            <element signature="e#4254#4255#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/submodules/tweets/tweets.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="10" lean-forward="false" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/.angular-cli.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="44" lean-forward="false" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="201" lean-forward="false" selection-start-line="12" selection-start-column="201" selection-end-line="12" selection-end-column="201" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/src/app/modules/followers/followers.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1738,17 +1196,6 @@
         <state relative-caret-position="36">
           <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/TweetResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1776,14 +1223,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/submodules/login/login.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/src/app/modules/timeline/timeline.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -1800,73 +1239,327 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/Views/dashboard/dashboard.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="73" lean-forward="false" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular/src/app/modules/post-tweet/post-tweet.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="306">
           <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
           <folding>
-            <element signature="e#0#77#0" expanded="true" />
+            <element signature="e#0#77#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/globals.ts">
+    <entry file="file://$PROJECT_DIR$/angular/src/app/globals.ts" />
+    <entry file="file://$PROJECT_DIR$/node_modules/angular2-cookie/services/cookies.service.js.map" />
+    <entry file="file://$PROJECT_DIR$/node_modules/angular2-cookie/services/cookies.service.d.ts" />
+    <entry file="file://$PROJECT_DIR$/node_modules/angular2-cookie/services/base-cookie-options.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/beans.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/angular2-cookie/services/cookies.service.js.map">
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/Startup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="0" column="5005" lean-forward="false" selection-start-line="0" selection-start-column="5005" selection-end-line="0" selection-end-column="5005" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/angular2-cookie/services/cookies.service.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/angular2-cookie/services/base-cookie-options.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/angular/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/angular/src/app/Views/dashboard/dashboard.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        <state relative-caret-position="108">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
           <folding>
-            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#0#59#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/PingResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logic/PasswordHash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="19" column="106" lean-forward="false" selection-start-line="19" selection-start-column="106" selection-end-line="19" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDAOImplJPA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDAOImplLocal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="78" column="37" lean-forward="false" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="140" column="16" lean-forward="false" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logic/KeyGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/PermissionGroupDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/PermissionGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/jre/lib/jce.jar!/javax/crypto/KeyGenerator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="246" column="27" lean-forward="false" selection-start-line="246" selection-start-column="27" selection-end-line="246" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Annotations/TokenRequired.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/UserResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="45" column="45" lean-forward="false" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt/0.9.0/jjwt-0.9.0.jar!/io/jsonwebtoken/JwtParser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="881">
+          <caret line="55" column="16" lean-forward="false" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+          <folding>
+            <marker date="1523432498344" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1523432498344" expanded="false" signature="139:180" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt/0.9.0/jjwt-0.9.0.jar!/io/jsonwebtoken/Jwts.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <marker date="1523432498344" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1523432498344" expanded="false" signature="139:378" ph="..." />
+            <marker date="1523432498344" expanded="true" signature="425:432" ph="{}" />
+            <marker date="1523432498344" expanded="false" signature="467:478" ph=" { " />
+            <marker date="1523432498344" expanded="false" signature="505:511" ph=" }" />
+            <marker date="1523432498344" expanded="false" signature="572:583" ph=" { " />
+            <marker date="1523432498344" expanded="false" signature="616:622" ph=" }" />
+            <marker date="1523432498344" expanded="false" signature="663:674" ph=" { " />
+            <marker date="1523432498344" expanded="false" signature="704:710" ph=" }" />
+            <marker date="1523432498344" expanded="false" signature="777:788" ph=" { " />
+            <marker date="1523432498344" expanded="false" signature="824:830" ph=" }" />
+            <marker date="1523432498344" expanded="false" signature="865:876" ph=" { " />
+            <marker date="1523432498344" expanded="false" signature="903:909" ph=" }" />
+            <marker date="1523432498344" expanded="false" signature="970:981" ph=" { " />
+            <marker date="1523432498344" expanded="false" signature="1014:1020" ph=" }" />
+            <marker date="1523432498344" expanded="true" signature="1058:1069" ph=" { " />
+            <marker date="1523432498344" expanded="true" signature="1099:1105" ph=" }" />
+            <marker date="1523432498344" expanded="false" signature="1145:1156" ph=" { " />
+            <marker date="1523432498344" expanded="false" signature="1187:1193" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt/0.9.0/jjwt-0.9.0.jar!/io/jsonwebtoken/impl/DefaultJwtParser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="430" column="27" lean-forward="false" selection-start-line="430" selection-start-column="27" selection-end-line="430" selection-end-column="27" />
+          <folding>
+            <marker date="1523432498344" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1523432498344" expanded="false" signature="144:1531" ph="..." />
+            <marker date="1523432498344" expanded="true" signature="2135:2228" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="2282:2361" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="2413:2488" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="2544:2623" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="2677:2754" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="2798:2865" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="2923:3006" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="3062:3143" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="3206:3447" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="3492:3613" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="3677:3774" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="3823:3950" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="4017:4204" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="4250:4362" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="4446:4610" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="4712:4900" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="4942:5416" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="5521:14820" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="14892:16825" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="16921:16987" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="17121:17695" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="17767:18001" ph="{...}" />
+            <marker date="1523432498344" expanded="false" signature="17814:17958" ph="onPlaintextJwt(jwt) → { " />
+            <marker date="1523432498344" expanded="false" signature="17969:17993" ph=" }" />
+            <marker date="1523432498344" expanded="true" signature="18067:18476" ph="{...}" />
+            <marker date="1523432498344" expanded="false" signature="18129:18278" ph="onClaimsJwt(jwt) → { " />
+            <marker date="1523432498344" expanded="false" signature="18289:18321" ph=" }" />
+            <marker date="1523432498344" expanded="true" signature="18540:18931" ph="{...}" />
+            <marker date="1523432498344" expanded="false" signature="18605:18733" ph="onPlaintextJws(jws) → { " />
+            <marker date="1523432498344" expanded="false" signature="18744:18776" ph=" }" />
+            <marker date="1523432498344" expanded="true" signature="18989:19193" ph="{...}" />
+            <marker date="1523432498344" expanded="true" signature="19033:19150" ph="onClaimsJws(jws) → { " />
+            <marker date="1523432498344" expanded="true" signature="19161:19185" ph=" }" />
+            <marker date="1523432498344" expanded="true" signature="19251:19476" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logic/TokenRequiredFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="61" column="30" lean-forward="false" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/TweetResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/LoginResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/service/tweet.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/Views/tweet/tweet.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/auth/auth.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/auth/token.interceptor.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1875,9 +1568,91 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/Views/tweet/tweet.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/submodules/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/node_modules/@ngtools/webpack/src/angular_compiler_plugin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="673" column="22" lean-forward="false" selection-start-line="673" selection-start-column="22" selection-end-line="673" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/Views/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/Views/authentication/authentication.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/Views/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="29" column="3" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="29" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/Views/authentication/authentication.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/Views/dashboard/dashboard.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>

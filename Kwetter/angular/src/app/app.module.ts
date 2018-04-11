@@ -7,7 +7,7 @@ import { TweetsComponent } from './submodules/tweets/tweets.component';
 import { UsersComponent } from './submodules/users/users.component';
 import {UserService} from "./service/user.service";
 import {TweetService} from "./service/tweet.service";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { TimelineComponent } from './modules/timeline/timeline.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './Views/dashboard/dashboard.component';
@@ -17,8 +17,11 @@ import { FollowersComponent } from './modules/followers/followers.component';
 import { PostTweetComponent } from './modules/post-tweet/post-tweet.component';
 import { TweetComponent } from './Views/tweet/tweet.component';
 import { UserComponent } from './Views/user/user.component';
-import { LoginComponent } from './submodules/login/login.component'
+import { LoginComponent } from './Views/Login/login.component'
 import { CookieService } from 'ngx-cookie-service';
+import { JwtHelperService } from '@auth0/angular-jwt';
+import {TokenInterceptor} from "./auth/token.interceptor";
+import { AuthenticationComponent } from './Views/authentication/authentication.component';
 
 
 @NgModule({
@@ -33,7 +36,8 @@ import { CookieService } from 'ngx-cookie-service';
     PostTweetComponent,
     TweetComponent,
     UserComponent,
-    LoginComponent
+    LoginComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,12 @@ import { CookieService } from 'ngx-cookie-service';
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [UserService, TweetService, CookieService ],
+  providers: [UserService, TweetService, CookieService, JwtHelperService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

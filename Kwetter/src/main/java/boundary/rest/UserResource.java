@@ -1,5 +1,7 @@
 package boundary.rest;
 
+import Annotations.TokenRequired;
+import domain.Role;
 import domain.Tweet;
 import domain.User;
 import service.TweetService;
@@ -45,6 +47,7 @@ public class UserResource {
     }
 
     @GET
+    @TokenRequired(requiredPermissionGroup = Role.Admin)
     @Path("{username}/timeline")
     public Response getTimeline(@PathParam("username") String username) {
         List<JsonObject> allTweetsJson = new ArrayList<>();

@@ -14,4 +14,5 @@ public interface UserDAO {
 
     boolean editUser(User user);
 
+    User authenticateUser(String username, String password);
 }

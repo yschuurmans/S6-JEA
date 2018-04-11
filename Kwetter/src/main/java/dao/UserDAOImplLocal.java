@@ -1,5 +1,6 @@
 package dao;
 
+import Logic.PasswordHash;
 import domain.User;
 
 import javax.ejb.Stateless;
@@ -71,5 +72,14 @@ public class UserDAOImplLocal implements UserDAO {
             }
         }
         return false;
+    }
+
+    @Override
+    public User authenticateUser(String username, String password) {
+        User user = findUserByName(username);
+        String hashedPassword = PasswordHash.stringToHash(password);
+        if(user.getPassword().equals(hashedPassword))
+            return user;
+        return null;
     }
 }

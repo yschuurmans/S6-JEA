@@ -17,6 +17,7 @@ import static javax.persistence.CascadeType.PERSIST;
 
 @Entity
 @NamedQueries({
+        @NamedQuery(name = "user.authenticate", query = "SELECT s FROM User s WHERE s.username = :username AND s.password = :password"),
         @NamedQuery(name = "user.findByname", query = "SELECT s FROM User s WHERE s.username = :name"),
         @NamedQuery(name = "user.findByID", query = "SELECT s FROM User s WHERE s.id = :id")
 })
@@ -81,8 +82,8 @@ public class User {
                 add("id", this.id).
                 add("username", this.username).
                 add("bio", this.bio).
-                add("tweets", HttpLogic.getResourceUrl(request,"/users/"+this.username+"/tweets")).
-                add("likes", HttpLogic.getResourceUrl(request,"/users/"+this.username+"/liked")).
+                add("tweets", HttpLogic.getResourceUrl(request, "/users/" + this.username + "/tweets")).
+                add("likes", HttpLogic.getResourceUrl(request, "/users/" + this.username + "/liked")).
                 build();
     }
 
@@ -171,7 +172,7 @@ public class User {
     }
 
     public List<Tweet> recentTweets(int amount) {
-        return tweets.subList(tweets.size()-amount, tweets.size());
+        return tweets.subList(tweets.size() - amount, tweets.size());
     }
 
     public void setTweets(List<Tweet> tweets) {
@@ -187,24 +188,24 @@ public class User {
     }
 
     public Role getPermissionGroup() {
-        if(permissionGroups == null) permissionGroups = new ArrayList<>();
-        if(permissionGroups.toArray().length <= 0) return Role.None;
-        switch(((PermissionGroup)permissionGroups.toArray()[0]).getGroupName()) {
+        if (permissionGroups == null) permissionGroups = new ArrayList<>();
+        if (permissionGroups.toArray().length <= 0) return Role.None;
+        switch (((PermissionGroup) permissionGroups.toArray()[0]).getGroupName()) {
             case PermissionGroup.ADMIN_GROUP_NAME:
                 return Role.Admin;
             case PermissionGroup.MODERATOR_GROUP_NAME:
                 return Role.Moderator;
             case PermissionGroup.USER_GROUP_NAME:
                 return Role.User;
-            default :
+            default:
                 return Role.None;
         }
     }
 
     public void setPermissionGroup(Role newRole) {
-        if(permissionGroups == null) permissionGroups = new ArrayList<>();
+        if (permissionGroups == null) permissionGroups = new ArrayList<>();
         permissionGroups.clear();
-        switch(newRole) {
+        switch (newRole) {
             case Admin:
                 permissionGroups.add(PermissionGroup.ADMIN_GROUP);
                 break;

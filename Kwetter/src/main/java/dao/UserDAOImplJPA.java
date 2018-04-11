@@ -1,11 +1,13 @@
 package dao;
 
 import Annotations.JPA;
+import Logic.PasswordHash;
 import domain.User;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import javax.ejb.Stateless;
 import javax.persistence.*;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,6 +75,15 @@ public class UserDAOImplJPA implements UserDAO {
         }catch(Exception ex) {
             return false;
         }
+    }
+
+    @Override
+    public User authenticateUser(String username, String password) {
+        TypedQuery<User> query = em.createNamedQuery("user.authenticate", User.class);
+        query.setParameter("username", username);
+        query.setParameter("password", PasswordHash.stringToHash(password));
+        User result = query.getSingleResult();
+        return result;
     }
 
 
