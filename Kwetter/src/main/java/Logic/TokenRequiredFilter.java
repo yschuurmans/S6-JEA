@@ -26,7 +26,7 @@ import java.security.Key;
 @Provider
 @TokenRequired
 @Priority(Priorities.AUTHENTICATION)
-class JWTTokenNeededFilter implements ContainerRequestFilter {
+class TokenRequiredFilter implements ContainerRequestFilter {
 
     @Inject
     UserService userService;
@@ -41,8 +41,11 @@ class JWTTokenNeededFilter implements ContainerRequestFilter {
         // Get the HTTP Authorization header from the request
         String authorizationHeader = requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
 
-        // Extract the token from the HTTP Authorization header
-        String token = authorizationHeader.substring("Bearer".length()).trim();
+        String token = "";
+        try {
+            // Extract the token from the HTTP Authorization header
+            token = authorizationHeader.substring("Bearer".length()).trim();
+        }catch(Exception e) {}
 
         try {
 

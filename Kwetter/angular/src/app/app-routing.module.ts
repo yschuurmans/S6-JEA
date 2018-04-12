@@ -14,6 +14,7 @@ const routes: Routes = [
   {path: 'users', component: UsersComponent},
   { path: '', component: DashboardComponent},
   { path: 'login', component: AuthenticationComponent},
+  { path: 'profile', component: UserComponent},
   { path: 'tweet/:id', component: TweetComponent},
   { path: 'user/:username', component: UserComponent},
 ];

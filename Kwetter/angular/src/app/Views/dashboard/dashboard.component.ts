@@ -10,7 +10,7 @@ import {User} from "../../domain/user";
 export class DashboardComponent implements OnInit {
 
   @ViewChild(TimelineComponent) timeline : TimelineComponent;
-  currentUser: string;
+  currentUser: string ;
 
   constructor() {
     this.currentUser = localStorage.getItem('username');

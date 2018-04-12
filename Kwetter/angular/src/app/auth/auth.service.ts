@@ -26,15 +26,19 @@ export class AuthService {
     return !helper.isTokenExpired(token);
   }
 
-  public setToken(token : string) {
-    return localStorage.setItem('token', token);
+  public setToken(token : string, username : string) {
+    localStorage.setItem('username', username);
+    localStorage.setItem('token', token);
   }
 
-  authenticate(username: String, password: String): Observable<any> {
-    let options = {
+  authenticate(username: String, password: String) {
+
+    return this.http.post<any>(
+      'http://localhost:8080/Kwetter/api/login/',
+      `username=${username}&password=${password}`,
+      {
+      observe:"response",
       headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
-    };
-    const body = `username=${username}&password=${password}`
-    return this.http.post<any>('http://localhost:8080/Kwetter/api/login/', body,options );
+    });
   }
 }

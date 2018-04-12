@@ -16,8 +16,8 @@ export class UserComponent implements OnInit {
   constructor(private userService: UserService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    if(!this.username)
-      this.username = this.route.snapshot.paramMap.get('username');
+    if(!this.username || this.username.length < 1)
+      this.username = localStorage.getItem('username');
     this.getUser();
   }
 

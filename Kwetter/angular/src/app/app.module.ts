@@ -20,6 +20,7 @@ import { UserComponent } from './Views/user/user.component';
 import {TokenInterceptor} from "./auth/token.interceptor";
 import { AuthenticationComponent } from './Views/authentication/authentication.component';
 import {AuthService} from "./auth/auth.service";
+import {JwtInterceptor} from "./auth/jwt-interceptor";
 
 
 @NgModule({
@@ -47,7 +48,14 @@ import {AuthService} from "./auth/auth.service";
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
       multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      multi: true
     }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}

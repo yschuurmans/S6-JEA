@@ -37,7 +37,7 @@ public class LoginResource {
     @POST
     @Path("/")
     @Consumes(APPLICATION_FORM_URLENCODED)
-    public Response authenticateUser(@FormParam("login") String login,
+    public Response authenticateUser(@FormParam("username") String login,
                                      @FormParam("password") String password) {
         try {
 
@@ -49,7 +49,7 @@ public class LoginResource {
             String token = issueToken(login);
 
             // Return the token on the response
-            return Response.ok().header(AUTHORIZATION, "Bearer " + token).build();
+            return Response.ok().header (AUTHORIZATION, "Bearer " + token).build();
 
         } catch (SecurityException e) {
             return Response.status(UNAUTHORIZED).build();

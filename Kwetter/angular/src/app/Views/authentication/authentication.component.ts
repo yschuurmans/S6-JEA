@@ -12,6 +12,8 @@ export class AuthenticationComponent implements OnInit {
   username: string;
   password: string;
 
+  re
+
   constructor(private authService: AuthService, private router: Router) {
   }
 
@@ -21,11 +23,13 @@ export class AuthenticationComponent implements OnInit {
 
   login() {
     this.authService.authenticate(this.username, this.password).subscribe(
+  //    resp => console.log(resp.headers));
       x => {
-        this.authService.setToken(x.headers.get('Authorization'))
+        console.log(x);
+        console.log(x.headers);
+        console.log(x.headers.get('Authorization'));
+        this.authService.setToken(x.headers.get('Authorization'), this.username);
+        this.router.navigate(['/'])
       });
-
-    this.router.navigate(['/']);
-
   }
 }
