@@ -1,5 +1,7 @@
 package boundary.rest;
 
+import Annotations.TokenRequired;
+import domain.Role;
 import domain.User;
 import service.UserService;
 
@@ -11,6 +13,7 @@ import javax.ws.rs.core.Response;
 
 @Path("hashtags")
 @Stateless
+@TokenRequired(requiredPermissionGroup = Role.User)
 public class HashtagResource {
     @Inject
     private service.HashtagService s;

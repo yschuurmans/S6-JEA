@@ -28,6 +28,7 @@ public class User {
     private long id;
     @Column(unique = true)
     private String username;
+    private String profilePicture;
     @JsonbTransient
     private String password;
     private String salt;
@@ -82,6 +83,7 @@ public class User {
                 add("id", this.id).
                 add("username", this.username).
                 add("bio", this.bio).
+                add("profilePicture", this.profilePicture).
                 add("tweets", HttpLogic.getResourceUrl(request, "/users/" + this.username + "/tweets")).
                 add("likes", HttpLogic.getResourceUrl(request, "/users/" + this.username + "/liked")).
                 build();
@@ -177,6 +179,14 @@ public class User {
 
     public void setTweets(List<Tweet> tweets) {
         this.tweets = tweets;
+    }
+
+    public String getProfilePicture() {
+        return profilePicture;
+    }
+
+    public void setProfilePicture(String profilePicture) {
+        this.profilePicture = profilePicture;
     }
 
     public Collection<PermissionGroup> getPermissionGroups() {

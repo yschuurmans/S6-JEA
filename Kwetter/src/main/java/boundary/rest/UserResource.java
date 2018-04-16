@@ -25,6 +25,7 @@ import java.util.List;
 @Path("users")
 @Stateless
 @Produces(MediaType.APPLICATION_JSON)
+@TokenRequired(requiredPermissionGroup = Role.User)
 public class UserResource {
     @Inject
     private UserService us;
@@ -47,7 +48,6 @@ public class UserResource {
     }
 
     @GET
-    @TokenRequired(requiredPermissionGroup = Role.Admin)
     @Path("{username}/timeline")
     public Response getTimeline(@PathParam("username") String username) {
         List<JsonObject> allTweetsJson = new ArrayList<>();
@@ -73,7 +73,7 @@ public class UserResource {
 
     @POST
     @Path("{username}")
-    public Response editUser(User user) {
+    public Response editUser(@PathParam("username") String username, User user) {
         us.editUser(user);
         return Response.ok().build();
     }

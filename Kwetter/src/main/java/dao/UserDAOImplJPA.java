@@ -69,8 +69,11 @@ public class UserDAOImplJPA implements UserDAO {
 
     @Override
     public boolean editUser(User user) {
+
+        User u =findUserByName(user.getUsername());
+        u.setBio(user.getBio());
         try {
-            em.merge(user);
+            em.merge(u);
             return true;
         }catch(Exception ex) {
             return false;

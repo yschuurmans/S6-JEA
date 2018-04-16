@@ -9,11 +9,20 @@ import {TweetService} from "../../service/tweet.service";
 })
 export class TweetsComponent implements OnInit {
   @Input() tweets: Tweet[];
+  @Input() username: string;
 
-  constructor() {
+  constructor(private tweetService : TweetService) {
   }
 
   ngOnInit() {
+    if(this.username.length >=1) {
+      this.getTweets();
+    }
+  }
+  getTweets() {
+    this.tweetService.getUserTweets(this.username).subscribe(
+      tweets => this.tweets = tweets
+    );
   }
 }
 

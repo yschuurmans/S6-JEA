@@ -25,6 +25,7 @@ export class TimelineComponent implements OnInit {
 
   refreshTweets() {
     console.log("refreshing tweets");
+    if(this.username.length < 1) this.username = 's';
     this.getTimelineTweets(this.username);
   }
 }

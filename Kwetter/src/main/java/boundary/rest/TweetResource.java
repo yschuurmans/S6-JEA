@@ -1,5 +1,7 @@
 package boundary.rest;
 
+import Annotations.TokenRequired;
+import domain.Role;
 import domain.Tweet;
 import domain.User;
 import service.TweetService;
@@ -14,6 +16,7 @@ import javax.ws.rs.core.Response;
 @Path("tweets")
 @Stateless
 @Produces(MediaType.APPLICATION_JSON)
+@TokenRequired(requiredPermissionGroup = Role.User)
 public class TweetResource {
     @Inject
     private TweetService ts;

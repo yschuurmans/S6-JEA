@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {TimelineComponent} from "../../modules/timeline/timeline.component";
 import {User} from "../../domain/user";
+import {AuthService} from "../../auth/auth.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -13,10 +14,10 @@ export class DashboardComponent implements OnInit {
   currentUser: string ;
 
   constructor() {
-    this.currentUser = localStorage.getItem('username');
   }
 
   ngOnInit() {
+    this.currentUser = localStorage.getItem('username');
   }
 
   tweetPosted() {

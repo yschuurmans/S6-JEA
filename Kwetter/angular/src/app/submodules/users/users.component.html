@@ -1,7 +1,7 @@
 <ul class="media-list" *ngFor="let user of users">
   <li class="userItem media">
-    <a href="#" class="media-left">
-      <img src="https://sanelythinking.files.wordpress.com/2012/01/img_2433.png" alt="" class="img-circle">
+    <a href="/user/{{user.username}}" class="media-left">
+      <img src="{{user.profilePicture}}" alt="" class="img-circle">
     </a>
     <div class="media-body">
       <div class="media-header">{{user.username}}</div>

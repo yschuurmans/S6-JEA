@@ -31,6 +31,7 @@ export class AppComponent {
 
   logout() {
     localStorage.setItem('token', '');
+    localStorage.setItem('username', '');
     location.reload();
   }
 }

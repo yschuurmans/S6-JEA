@@ -1,5 +1,12 @@
-<form id="loginForm" (submit)="login()">
-  <input name="username" type="text" [(ngModel)]="this.username"/>
-  <input name="password" type="text" [(ngModel)]="this.password"/>
-  <button type="submit" form= "loginForm" class="btn btn-success">Login</button>
-</form>
+<br/>
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <form id="loginForm" (submit)="login()">
+      <input name="username" type="text" [(ngModel)]="this.username"/><br/>
+      <input name="password" type="password" [(ngModel)]="this.password"/><br/>
+      <button type="submit" form="loginForm" class="btn btn-success text-center">Login</button>
+    </form>
+  </div>
+</div>
+
+

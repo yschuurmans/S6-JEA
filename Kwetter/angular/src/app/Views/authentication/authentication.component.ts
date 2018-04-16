@@ -12,8 +12,6 @@ export class AuthenticationComponent implements OnInit {
   username: string;
   password: string;
 
-  re
-
   constructor(private authService: AuthService, private router: Router) {
   }
 

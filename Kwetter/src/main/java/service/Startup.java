@@ -35,6 +35,9 @@ public class Startup {
         groupDaoJPA.create(PermissionGroup.ADMIN_GROUP);
         groupDaoJPA.create(PermissionGroup.MODERATOR_GROUP);
         groupDaoJPA.create(PermissionGroup.USER_GROUP);
+        Youri.setProfilePicture("https://t2.rbxcdn.com/39e183ed6cf88b19a00ec07b42b3e04d");
+        Ken.setProfilePicture("https://sanelythinking.files.wordpress.com/2012/01/img_2433.png");
+        Mike.setProfilePicture("https://pre00.deviantart.net/168c/th/pre/i/2015/300/e/7/derp_face_by_cherryblossomcake-d9ekfoc.png");
 
         Youri.getPermissionGroups().add(PermissionGroup.ADMIN_GROUP);
         Mike.getPermissionGroups().add(PermissionGroup.MODERATOR_GROUP);

@@ -25,4 +25,8 @@ export class UserService {
   getUser(username: String) {
     return this.http.get<User>(this.usersUrl + '/'+username);
   }
+
+  updateUser(username: String, user : User) {
+    return this.http.post<User>(this.usersUrl + '/'+username, user);
+  }
 }

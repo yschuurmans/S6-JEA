@@ -11,19 +11,46 @@ import {UserService} from "../../service/user.service";
 export class UserComponent implements OnInit {
 
   @Input() username: String;
-  user : User;
+  user: User;
 
-  constructor(private userService: UserService, private route: ActivatedRoute) { }
+  thisUser: boolean;
+  editMode: boolean;
+
+  constructor(private userService: UserService, private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
-    if(!this.username || this.username.length < 1)
+    const username = this.route.snapshot.paramMap.get('username');
+    if (!username || username.length < 1)
       this.username = localStorage.getItem('username');
+    else this.username = username;
     this.getUser();
   }
 
   getUser() {
     this.userService.getUser(this.username).subscribe(
-      user => this.user = user
+      user => {
+        this.user = user;
+        this.thisUser = user.username == localStorage.getItem("username");
+      }
+    );
+
+  }
+
+  enableEdit() {
+    this.editMode = !this.editMode;
+  }
+
+  saveEdit() {
+    var newUser = new User();
+
+    newUser.username = this.user.username;
+    newUser.bio = this.user.bio;
+
+    this.userService.updateUser(this.username, newUser).subscribe(
+      () => {
+        this.getUser();
+      }
     );
   }
 }

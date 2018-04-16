@@ -29,4 +29,9 @@ export class TweetService {
   getTweet(tweetID: Number) {
     return this.http.get<Tweet>('http://localhost:8080/Kwetter/api/tweets/' + tweetID);
   }
+
+  getUserTweets(username: string) {
+    return this.http.get<Tweet[]>('http://localhost:8080/Kwetter/api/users/' + username + "/tweets");
+
+  }
 }

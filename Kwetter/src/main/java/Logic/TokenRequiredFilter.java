@@ -56,10 +56,6 @@ class TokenRequiredFilter implements ContainerRequestFilter {
             //String justTheToken = token.substring("Bearer".length()).trim();
 
             Role requiredRole = Role.None;
-            Method test = resourceInfo.getResourceMethod();
-            Class test2 = resourceInfo.getResourceClass();
-
-
             try {
                 requiredRole = resourceInfo.getResourceClass().getAnnotation(TokenRequired.class).requiredPermissionGroup();
             } catch (NullPointerException ignored) {

@@ -1,7 +1,7 @@
 <ul class="media-list" *ngFor="let tweet of tweets">
   <li class="userItem media">
     <a href="/user/{{tweet.poster.username}}" class="media-left">
-      <img src="https://sanelythinking.files.wordpress.com/2012/01/img_2433.png" alt="" class="img-circle">
+      <img src="{{tweet.poster.profilePicture}}" alt="" class="img-circle">
     </a>
     <div class="media-body">
       <div class="media-header">{{tweet.poster.username}}</div>

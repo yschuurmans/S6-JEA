@@ -3,17 +3,43 @@
     <div *ngIf="user" class="card">
       <div class="card-header">{{user.username}}</div>
       <div class="card-body media">
-        <div class="media-left">
-          <img src="https://sanelythinking.files.wordpress.com/2012/01/img_2433.png" alt="" class="lg-img-circle">
+        <div *ngIf="!editMode" class="row col-md-12">
+          <div class="media-left">
+            <img src="{{user.profilePicture}}" alt="" class="lg-img-circle">
+          </div>
+          <div class="media-body">
+            <div class="media-header">{{user.username}}</div>
+            <div class="media-content">{{user.bio}}</div>
+          </div>
         </div>
-        <div class="media-body">
-          <div class="media-header">{{user.username}}</div>
-          <div class="media-content">{{user.bio}}</div>
+        <div *ngIf="editMode" class="row col-md-12">
+          <div class="media-left">
+            <img src="{{user.profilePicture}}" alt="" class="lg-img-circle">
+          </div>
+          <div class="media-body">
+            <div class="media-header">{{user.username}}</div>
+            <div class="media-content">
+              <textarea style="width:100%; height: 100%;"  name="username" type="text" [(ngModel)]="user.bio"></textarea><br/>
+
+
+            </div>
+          </div>
+          <br/>
         </div>
+        <button  class="btn btn-primary" (click)="enableEdit()">edit</button><br/>
       </div>
+      <button *ngIf="editMode" class="btn btn-success" (click)="saveEdit()">save</button>
     </div>
   </div>
   <div class="col-lg-5">
     <app-followers *ngIf="user" username={{user.username}}></app-followers>
+  </div>
+  <div class="col-lg-5 offset-lg-1">
+    <div class="card">
+      <div class="card-header"><h3>Tweets</h3></div>
+      <div class="card-body">
+        <app-tweets *ngIf="user" username="{{user.username}}"></app-tweets>
+      </div>
+    </div>
   </div>
 </div>
