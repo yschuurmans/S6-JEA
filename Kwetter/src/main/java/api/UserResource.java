@@ -1,4 +1,4 @@
-package boundary.rest;
+package api;
 
 import Annotations.TokenRequired;
 import domain.Role;
@@ -43,7 +43,7 @@ public class UserResource {
     @GET
     public Response getAll() {
         List<JsonObject> allUsers = new ArrayList<>();
-        us.getAllUsers().forEach(user -> allUsers.add(user.toJson(httpRequest)));
+        us.getAllUsers().forEach(user -> allUsers.add(user.toJson()));
         return Response.ok(allUsers).build();
     }
 
@@ -54,7 +54,7 @@ public class UserResource {
         List<Tweet> allTweets = new ArrayList<>();
         allTweets = ts.getTimelineTweets(username,50);
         Collections.sort(allTweets);
-        allTweets.forEach(tweet -> allTweetsJson.add(tweet.toJson(httpRequest)));
+        allTweets.forEach(tweet -> allTweetsJson.add(tweet.toJson()));
         return Response.ok(allTweetsJson).build();
     }
 

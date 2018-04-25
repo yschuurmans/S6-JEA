@@ -6,6 +6,7 @@ import dao.UserDAO;
 import domain.Hashtag;
 import domain.Tweet;
 import domain.User;
+import websockets.TimelineSocket;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -27,6 +28,8 @@ public class TweetService {
     @Inject
     private UserService userService;
 
+    @Inject
+    private TimelineSocket timelineSocket;
 
 
     public TweetService() {
@@ -91,12 +94,14 @@ public class TweetService {
             }
 
         }
-        tweetDAO.editTweet(tweet);
         tweet.setHashTagsUsed(usedHashtags);
         tweet.setMentions(usedMentions);
         User poster = tweet.getPoster();
         poster.getTweets().add(tweet);
+        tweetDAO.editTweet(tweet);
         userService.editUser(poster);
+
+        timelineSocket.alertNewTweet(tweet);
     }
 
 

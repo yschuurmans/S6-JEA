@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {TweetService} from "../../service/tweet.service";
 import {Tweet} from "../../domain/tweet";
+import {SocketService} from "../../service/socket.service";
 
 @Component({
   selector: 'app-timeline',
@@ -9,18 +10,13 @@ import {Tweet} from "../../domain/tweet";
 })
 export class TimelineComponent implements OnInit {
   tweets : Tweet[] = [];
-  @Input() username: String;
+  @Input() username: string;
 
-  constructor(private tweetService: TweetService) { }
+  constructor(private tweetService: TweetService, private socketService : SocketService) { }
 
   ngOnInit() {
     this.refreshTweets();
-  }
-
-  getTimelineTweets(userID : String) : void {
-      this.tweetService.getTimelineTweets(userID).subscribe(
-        tweets => this.tweets = tweets
-      );
+    this.subscribeWebsocket();
   }
 
   refreshTweets() {
@@ -28,4 +24,21 @@ export class TimelineComponent implements OnInit {
     if(this.username.length < 1) this.username = 's';
     this.getTimelineTweets(this.username);
   }
+
+  getTimelineTweets(userID : String) : void {
+    this.tweetService.getTimelineTweets(userID).subscribe(
+      tweets => this.tweets = tweets
+    );
+  }
+
+  subscribeWebsocket() {
+    this.socketService.subscribeTimeline(this.username).subscribe(
+      message => {
+        console.log("RECEIVED : ");
+        console.log(message.data);
+        this.tweets.concat(message);
+      }
+    );
+  }
+
 }

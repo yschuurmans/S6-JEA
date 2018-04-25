@@ -58,10 +58,10 @@ public class Tweet  implements Comparable<Tweet>{
     private Date dateTime;
 
 
-    public JsonObject toJson(HttpServletRequest request) {
+    public JsonObject toJson() {
         return Json.createObjectBuilder().
                 add("id", this.id).
-                add("poster", this.poster.toJson(request)).
+                add("poster", this.poster.toJson()).
                 add("tweetContent", this.tweetContent).
                 build();
     }

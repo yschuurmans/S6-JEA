@@ -21,6 +21,7 @@ import {TokenInterceptor} from "./auth/token.interceptor";
 import { AuthenticationComponent } from './Views/authentication/authentication.component';
 import {AuthService} from "./auth/auth.service";
 import {JwtInterceptor} from "./auth/jwt-interceptor";
+import {SocketService} from "./service/socket.service";
 
 
 @NgModule({
@@ -43,7 +44,7 @@ import {JwtInterceptor} from "./auth/jwt-interceptor";
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [UserService, TweetService, AuthService,
+  providers: [UserService, TweetService, AuthService, SocketService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,

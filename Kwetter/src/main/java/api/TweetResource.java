@@ -1,4 +1,4 @@
-package boundary.rest;
+package api;
 
 import Annotations.TokenRequired;
 import domain.Role;

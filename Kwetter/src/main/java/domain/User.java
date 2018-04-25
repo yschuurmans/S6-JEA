@@ -11,9 +11,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import static javax.persistence.CascadeType.ALL;
-import static javax.persistence.CascadeType.DETACH;
-import static javax.persistence.CascadeType.PERSIST;
+import static javax.persistence.CascadeType.*;
 
 @Entity
 @NamedQueries({
@@ -48,7 +46,7 @@ public class User {
     private List<Tweet> likes;
 
     @JsonbTransient
-    @OneToMany(mappedBy = "poster", cascade = PERSIST)
+    @OneToMany(mappedBy = "poster", cascade = MERGE)
     private List<Tweet> tweets;
 
     @JsonbTransient
@@ -78,14 +76,12 @@ public class User {
 
     }
 
-    public JsonObject toJson(HttpServletRequest request) {
+    public JsonObject toJson() {
         return Json.createObjectBuilder().
                 add("id", this.id).
                 add("username", this.username).
                 add("bio", this.bio).
                 add("profilePicture", this.profilePicture).
-                add("tweets", HttpLogic.getResourceUrl(request, "/users/" + this.username + "/tweets")).
-                add("likes", HttpLogic.getResourceUrl(request, "/users/" + this.username + "/liked")).
                 build();
     }
 

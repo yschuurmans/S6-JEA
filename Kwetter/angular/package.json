@@ -24,6 +24,7 @@
     "@auth0/angular-jwt": "^1.1.0",
     "core-js": "^2.5.5",
     "rxjs": "^5.5.9",
+    "socket.io-client": "^2.1.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

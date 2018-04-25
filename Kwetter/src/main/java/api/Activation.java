@@ -1,4 +1,4 @@
-package boundary.rest;
+package api;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -8,6 +8,6 @@ import javax.ws.rs.core.Application;
  * JAX-RS resources in your application.
  */
 @ApplicationPath("/api/")
-public class JAXRSConfiguration extends Application {
+public class Activation extends Application {
 
 }

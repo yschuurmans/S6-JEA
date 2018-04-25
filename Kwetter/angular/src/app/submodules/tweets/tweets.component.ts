@@ -15,7 +15,7 @@ export class TweetsComponent implements OnInit {
   }
 
   ngOnInit() {
-    if(this.username.length >=1) {
+    if(this.username && this.username.length >=1) {
       this.getTweets();
     }
   }

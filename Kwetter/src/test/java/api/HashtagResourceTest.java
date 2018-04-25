@@ -1,4 +1,4 @@
-package boundary.rest;
+package api;
 
 import domain.Hashtag;
 import domain.Tweet;
