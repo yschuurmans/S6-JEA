@@ -96,7 +96,7 @@ public class TweetService {
         }
         tweet.setHashTagsUsed(usedHashtags);
         tweet.setMentions(usedMentions);
-        User poster = tweet.getPoster();
+        User poster = userService.findByName(tweet.getPoster().getUsername());
         poster.getTweets().add(tweet);
         tweetDAO.editTweet(tweet);
         userService.editUser(poster);

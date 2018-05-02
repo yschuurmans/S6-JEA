@@ -50,11 +50,14 @@ public class User {
     private List<Tweet> tweets;
 
     @JsonbTransient
-    @ManyToMany
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
     private List<User> followers;
 
     @JsonbTransient
-    @ManyToMany(mappedBy = "followers", cascade = PERSIST)
+    @ManyToMany(mappedBy = "followers")
     private List<User> following;
 
     public User(String username, String bio, String password) {

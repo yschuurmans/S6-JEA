@@ -74,10 +74,11 @@ public class UserDAOImplJPA implements UserDAO {
         u.setBio(user.getBio());
         try {
             em.merge(u);
-            em.flush();
             return true;
         }catch(Exception ex) {
             return false;
+        } finally {
+            em.flush();
         }
     }
 

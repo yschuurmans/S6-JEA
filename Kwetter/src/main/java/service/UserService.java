@@ -85,8 +85,10 @@ public class UserService {
     public void addFollower(String nameFollower, String nameToFollow) {
         User follower = userDAO.findUserByName(nameFollower);
         User toFollow = userDAO.findUserByName(nameToFollow);
-        toFollow.addFollower(follower);
-        follower.addFollowing(toFollow);
+        if(!toFollow.getFollowers().contains(follower))
+            toFollow.addFollower(follower);
+        if(!follower.getFollowing().contains(toFollow))
+            follower.addFollowing(toFollow);
         editUser(toFollow);
         editUser(follower);
     }

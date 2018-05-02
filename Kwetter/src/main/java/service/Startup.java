@@ -47,9 +47,9 @@ public class Startup {
         userService.addUser(Ken);
         userService.addUser(Mike);
 
-        userService.addFollower("Ken", "Youri");
-        userService.addFollower("Mike", "Youri");
-        userService.addFollower("Youri", "Ken");
+        userService.addFollower(Ken.getUsername(), Youri.getUsername());
+        userService.addFollower(Mike.getUsername(), Youri.getUsername());
+        userService.addFollower(Youri.getUsername(), Ken.getUsername());
 
         tweetService.addTweet(new Tweet(Youri, "RandomTweet"));
         tweetService.addTweet(new Tweet(Youri, "RandomTweet2"));
