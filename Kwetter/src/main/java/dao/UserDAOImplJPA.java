@@ -7,6 +7,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import javax.ejb.Stateless;
 import javax.persistence.*;
+import javax.transaction.Transaction;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
@@ -72,14 +73,16 @@ public class UserDAOImplJPA implements UserDAO {
 
         User u =findUserByName(user.getUsername());
         u.setBio(user.getBio());
+        boolean success = false;
         try {
             em.merge(u);
-            return true;
-        }catch(Exception ex) {
-            return false;
-        } finally {
             em.flush();
+            success = true;
+        }catch(Exception ex) {
+            System.out.println(ex.getMessage());
+            System.out.println(ex.getStackTrace());
         }
+        return success;
     }
 
     @Override

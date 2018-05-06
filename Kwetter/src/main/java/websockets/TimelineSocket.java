@@ -35,7 +35,7 @@ public class TimelineSocket {
 
     public void alertNewTweet(Tweet newTweet) {
         String tweet = newTweet.toJson().toString();
-        List<User> relevantUsers = userService.getUserFollowers(newTweet.getPoster().getUsername());
+        List<User> relevantUsers = new ArrayList<>(userService.getUserFollowers(newTweet.getPoster().getUsername()));
         relevantUsers.add(newTweet.getPoster());
 
         for (User relevantUser : relevantUsers) {

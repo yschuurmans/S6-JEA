@@ -104,7 +104,7 @@ public class UserService {
         toUnfollow.removeFollower(follower);
         follower.removeFollowing(toUnfollow);
         editUser(toUnfollow);
-        editUser(follower);
+        //editUser(follower);
     }
 
     /**

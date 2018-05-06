@@ -1,6 +1,7 @@
 package domain;
 
 import Logic.HttpLogic;
+import api.Link;
 
 import javax.json.Json;
 import javax.json.JsonObject;
@@ -21,7 +22,7 @@ import java.util.List;
         @NamedQuery(name = "tweet.findByPoster", query = "SELECT t FROM Tweet t WHERE t.poster = :poster")
 
 })
-public class Tweet  implements Comparable<Tweet>{
+public class Tweet implements Comparable<Tweet> {
     public Tweet() {
         mentions = new ArrayList<>();
         likedBy = new ArrayList<>();
@@ -63,6 +64,7 @@ public class Tweet  implements Comparable<Tweet>{
                 add("id", this.id).
                 add("poster", this.poster.toJson()).
                 add("tweetContent", this.tweetContent).
+                add("_links", buildRelations()).
                 build();
     }
 
@@ -127,5 +129,14 @@ public class Tweet  implements Comparable<Tweet>{
     @Override
     public int compareTo(Tweet o) {
         return o.getDateTime().compareTo(getDateTime());
+    }
+
+    private String buildRelations() {
+        List<Link> relLinks = new ArrayList<>();
+        relLinks.add(new Link("self", "/Kwetter/api/tweets/" + id, "GET"));
+        relLinks.add(new Link("poster", "/Kwetter/api/users/" + poster.getUsername(), "GET"));
+
+
+        return relLinks.toString();
     }
 }

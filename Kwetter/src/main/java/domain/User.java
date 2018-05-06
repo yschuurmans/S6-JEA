@@ -1,12 +1,11 @@
 package domain;
 
-import Logic.HttpLogic;
+import api.Link;
 
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
-import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -46,14 +45,11 @@ public class User {
     private List<Tweet> likes;
 
     @JsonbTransient
-    @OneToMany(mappedBy = "poster", cascade = MERGE)
+    @OneToMany(mappedBy = "poster", cascade = PERSIST)
     private List<Tweet> tweets;
 
     @JsonbTransient
-    @ManyToMany(cascade = {
-            CascadeType.PERSIST,
-            CascadeType.MERGE
-    })
+    @ManyToMany(cascade = CascadeType.PERSIST)
     private List<User> followers;
 
     @JsonbTransient
@@ -85,6 +81,7 @@ public class User {
                 add("username", this.username).
                 add("bio", this.bio).
                 add("profilePicture", this.profilePicture).
+                add("_links", buildRelations()).
                 build();
     }
 
@@ -225,6 +222,23 @@ public class User {
                 permissionGroups.add(PermissionGroup.USER_GROUP);
                 break;
         }
+    }
+
+    private String buildRelations() {
+        List<Link> relLinks = new ArrayList<>();
+        relLinks.add(new Link("self", "/Kwetter/api/users/" + username, "GET"));
+        relLinks.add(new Link("timeline", "/Kwetter/api/users/" + username + "/timeline", "GET"));
+        relLinks.add(new Link("edit", "/Kwetter/api/users/" + username, "POST"));
+        relLinks.add(new Link("delete", "/Kwetter/api/users/" + username, "DELETE"));
+        relLinks.add(new Link("followers","/Kwetter/api/users/"+username+"/followers","GET"));
+        relLinks.add(new Link("following","/Kwetter/api/users/"+username+"/following","GET"));
+        relLinks.add(new Link("tweets","/Kwetter/api/users/"+username+"/tweets","GET"));
+        relLinks.add(new Link("recenttweets","/Kwetter/api/users/"+username+"/recenttweets","GET"));
+        relLinks.add(new Link("posttweet","/Kwetter/api/users/"+username+"/tweets","PUT"));
+        relLinks.add(new Link("newfollower","/Kwetter/api/users/"+username+"/followers/{username}","PUT"));
+        relLinks.add(new Link("removefollower","/Kwetter/api/users/"+username+"/followers/{username}","DELETE"));
+
+        return relLinks.toString();
     }
 
 }

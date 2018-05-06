@@ -36,7 +36,9 @@ export class TimelineComponent implements OnInit {
       message => {
         console.log("RECEIVED : ");
         console.log(message.data);
-        this.tweets.concat(message);
+        console.log(JSON.parse(message.data));
+        this.tweets.unshift( JSON.parse(message.data));
+        console.log(this.tweets);
       }
     );
   }

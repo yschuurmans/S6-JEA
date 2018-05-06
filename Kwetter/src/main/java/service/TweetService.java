@@ -64,7 +64,7 @@ public class TweetService {
      * Posts a tweet
      * @param tweet The tweet which should be posted.
      */
-    public void addTweet(Tweet tweet) {
+    public void addTweet(Tweet tweet, boolean alertSocket) {
         //Match hastag usages within tweet content, and save these to the relevant hashtag and
         Pattern p = Pattern.compile("(?<=#)\\w++");
         Matcher m = p.matcher(tweet.getTweetContent());
@@ -101,7 +101,12 @@ public class TweetService {
         tweetDAO.editTweet(tweet);
         userService.editUser(poster);
 
-        timelineSocket.alertNewTweet(tweet);
+        if(alertSocket)
+            timelineSocket.alertNewTweet(tweet);
+    }
+
+    public void addTweet(Tweet tweet) {
+        addTweet(tweet, true);
     }
 
 

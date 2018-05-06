@@ -9,7 +9,6 @@ import {TweetService} from "../../service/tweet.service";
 })
 export class PostTweetComponent implements OnInit {
 
-  @Output() tweetPosted = new EventEmitter<void>();
   @Input() username: String;
   tweet : Tweet;
 
@@ -28,7 +27,6 @@ export class PostTweetComponent implements OnInit {
   }
 
   tweetSuccesfullyPosted(){
-    this.tweetPosted.next();
     this.tweet.tweetContent = "";
   }
 }
